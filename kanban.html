@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAIRS - Kanban Board</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .kanban-board {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .column {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            min-height: 300px;
+        }
+
+        .column h3 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        .task {
+            background-color: #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kanban Board</h1>
+        <p>Organize and manage your tasks visually</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="custom_templates_page.html">Templates</a>
+        <a href="how_it_works.html">How It Works</a>
+        <a href="#community">Community</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h2>Your Kanban Workflow</h2>
+        <div class="kanban-board">
+            <div class="column" id="todo">
+                <h3>To Do</h3>
+                <div class="task">Define project goals</div>
+                <div class="task">Research competitors</div>
+            </div>
+            <div class="column" id="in-progress">
+                <h3>In Progress</h3>
+                <div class="task">Create prototype</div>
+            </div>
+            <div class="column" id="done">
+                <h3>Done</h3>
+                <div class="task">Finalize business idea</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 STAIRS. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
