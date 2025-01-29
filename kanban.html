@@ -39,13 +39,14 @@
 
         .container {
             padding: 20px;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: auto;
         }
 
         .kanban-board {
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
         }
 
         .column {
@@ -53,7 +54,7 @@
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 30%;
+            width: 22%;
             min-height: 300px;
         }
 
@@ -93,6 +94,17 @@
             margin-bottom: 10px;
             font-weight: bold;
         }
+
+        @media (max-width: 768px) {
+            .kanban-board {
+                flex-direction: column;
+                align-items: center;
+            }
+            .column {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -107,31 +119,38 @@
         <a href="index.html">Home</a>
         <a href="custom_templates_page.html">Templates</a>
         <a href="how_it_works.html">How It Works</a>
-        <a href="#community">Community</a>
-        <a href="#contact">Contact</a>
+        <a href="kanban.html">Kanban Board</a>
+        <a href="https://dealegear.wixsite.com/meusite" target="_blank">Visit DealeGear</a>
     </nav>
 
     <div class="container">
         <h2>Your Kanban Workflow</h2>
         <div class="kanban-board">
+            <div class="column" id="backlog" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h3>Backlog</h3>
+                <div class="task" draggable="true" ondragstart="drag(event)" id="task1">Gather requirements</div>
+            </div>
             <div class="column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <h3>To Do</h3>
-                <div class="task" draggable="true" ondragstart="drag(event)" id="task1">Define project goals</div>
-                <div class="task" draggable="true" ondragstart="drag(event)" id="task2">Research competitors</div>
+                <div class="task" draggable="true" ondragstart="drag(event)" id="task2">Define project goals</div>
             </div>
             <div class="column" id="in-progress" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <h3>In Progress</h3>
                 <div class="task" draggable="true" ondragstart="drag(event)" id="task3">Create prototype</div>
             </div>
+            <div class="column" id="testing" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h3>Testing</h3>
+                <div class="task" draggable="true" ondragstart="drag(event)" id="task4">User feedback</div>
+            </div>
             <div class="column" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <h3>Done</h3>
-                <div class="task" draggable="true" ondragstart="drag(event)" id="task4">Finalize business idea</div>
+                <div class="task" draggable="true" ondragstart="drag(event)" id="task5">Finalize business idea</div>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2025 STAIRS. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        <p>&copy; 2025 STAIRS. All rights reserved. | <a href="https://dealegear.wixsite.com/meusite" target="_blank">Visit DealeGear</a></p>
     </footer>
 
     <script>
