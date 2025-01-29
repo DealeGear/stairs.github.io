@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STAIRS - Kanban Board</title>
+    <title>STAIRS - Transform Your Ideas</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,38 +37,61 @@
             background-color: #575757;
         }
 
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x600') center/cover;
+            color: white;
         }
 
-        .kanban-board {
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        .cta-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+
+        .features {
             display: flex;
-            justify-content: space-around;
             flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
         }
 
-        .column {
+        .feature {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+            padding: 20px;
             background-color: white;
-            padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 22%;
-            min-height: 300px;
-        }
-
-        .column h3 {
             text-align: center;
-            color: #4CAF50;
         }
 
-        .task {
-            background-color: #ddd;
-            padding: 10px;
+        .feature img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .feature h3 {
             margin: 10px 0;
-            border-radius: 5px;
-            cursor: grab;
         }
 
         footer {
@@ -109,68 +132,46 @@
             width: 24px;
             height: 24px;
         }
-
-        .alert {
-            text-align: center;
-            background-color: #ffcc00;
-            padding: 10px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        @media (max-width: 768px) {
-            .kanban-board {
-                flex-direction: column;
-                align-items: center;
-            }
-            .column {
-                width: 90%;
-                margin-bottom: 20px;
-            }
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Kanban Board</h1>
-        <p>Organize and manage your tasks visually</p>
+        <h1>Welcome to STAIRS</h1>
+        <p>Your platform to transform ideas into reality</p>
     </header>
 
-    <div class="alert">This is a test version. Changes will not be saved.</div>
-
     <nav>
-        <a href="index.html">Home</a>
-        <a href="custom_templates_page.html">Templates</a>
+        <a href="#features">Features</a>
+        <a href="custom_templates_page.html">Customizable Templates</a>
         <a href="how_it_works.html">How It Works</a>
-        <a href="kanban.html">Kanban Board</a>
-        <a href="https://dealegear.wixsite.com/meusite" target="_blank">Visit DealeGear</a>
+        <a href="#community">Community</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <div class="container">
-        <h2>Your Kanban Workflow</h2>
-        <div class="kanban-board">
-            <div class="column" id="backlog" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <h3>Backlog</h3>
-                <div class="task" draggable="true" ondragstart="drag(event)" id="task1">Gather requirements</div>
-            </div>
-            <div class="column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <h3>To Do</h3>
-                <div class="task" draggable="true" ondragstart="drag(event)" id="task2">Define project goals</div>
-            </div>
-            <div class="column" id="in-progress" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <h3>In Progress</h3>
-                <div class="task" draggable="true" ondragstart="drag(event)" id="task3">Create prototype</div>
-            </div>
-            <div class="column" id="testing" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <h3>Testing</h3>
-                <div class="task" draggable="true" ondragstart="drag(event)" id="task4">User feedback</div>
-            </div>
-            <div class="column" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <h3>Done</h3>
-                <div class="task" draggable="true" ondragstart="drag(event)" id="task5">Finalize business idea</div>
-            </div>
+    <section class="hero">
+        <h1>Step Up Your Ideas with STAIRS</h1>
+        <p>Turn your hobbies, goals, or business plans into actionable projects with ease.</p>
+        <a href="#" class="cta-button">Get Started</a>
+    </section>
+
+    <section id="features" class="features">
+        <div class="feature">
+            <img src="https://via.placeholder.com/100" alt="Templates">
+            <h3>Customizable Templates</h3>
+            <p>Choose from a wide range of templates to kickstart your projects.</p>
+            <a href="custom_templates_page.html" class="cta-button">Explore Templates</a>
         </div>
-    </div>
+        <div class="feature">
+            <img src="https://via.placeholder.com/100" alt="Kanban Board">
+            <h3>Kanban Boards</h3>
+            <p>Organize tasks and track progress with visual tools.</p>
+        </div>
+        <div class="feature">
+            <img src="https://via.placeholder.com/100" alt="Community">
+            <h3>Community Support</h3>
+            <p>Connect with like-minded individuals and collaborate on projects.</p>
+        </div>
+    </section>
 
     <footer>
         <div class="footer-links">
