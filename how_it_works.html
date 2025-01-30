@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STAIRS - How It Works</title>
+    <title>STAIRS - Transform Your Ideas</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,107 +37,169 @@
             background-color: #575757;
         }
 
-        .container {
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x600') center/cover;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        .cta-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             padding: 20px;
-            max-width: 1000px;
-            margin: auto;
+        }
+
+        .feature {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
-        .step {
-            background-color: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: left;
+        .feature img {
+            max-width: 100px;
+            margin-bottom: 10px;
         }
 
-        .step h3 {
-            color: #4CAF50;
-        }
-
-        .step p {
-            color: #555;
+        .feature h3 {
+            margin: 10px 0;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #333;
+            padding: 30px;
+            background-color: #222;
             color: white;
         }
 
-        footer a {
-            color: #4CAF50;
-            text-decoration: none;
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
         }
 
-        footer a:hover {
+        .footer-links a {
+            color: #4CAF50;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .footer-links a:hover {
             text-decoration: underline;
         }
 
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+
         @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-
-            nav {
+            .features {
                 flex-direction: column;
-            }
-
-            nav a {
-                padding: 10px;
-                text-align: center;
-                display: block;
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>How STAIRS Works</h1>
-        <p>Step-by-step guide to transforming your ideas into reality</p>
+        <h1>Welcome to STAIRS</h1>
+        <p>Your platform to transform ideas into reality</p>
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="custom_templates_page.html">Templates</a>
+        <a href="#features">Features</a>
+        <a href="custom_templates_page.html">Customizable Templates</a>
+        <a href="how_it_works.html">How It Works</a>
         <a href="#community">Community</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <div class="container">
-        <h2>Follow These Steps to Success</h2>
+    <section class="hero">
+        <h1>Step Up Your Ideas with STAIRS</h1>
+        <p>Turn your hobbies, goals, or business plans into actionable projects with ease.</p>
+    </section>
 
-        <div class="step">
-            <h3>Step 1: Choose Your Project Type</h3>
-            <p>Decide whether your project is for personal satisfaction, business, or career growth.</p>
+    <section id="features" class="features">
+        <div class="feature">
+            <img src="https://via.placeholder.com/100" alt="Templates">
+            <h3>Customizable Templates</h3>
+            <p>Choose from a wide range of templates to kickstart your projects.</p>
+            <a href="custom_templates_page.html" class="cta-button">Explore Templates</a>
         </div>
-
-        <div class="step">
-            <h3>Step 2: Select a Template</h3>
-            <p>Browse and choose a customizable template to fit your needs.</p>
+        <div class="feature">
+            <img src="https://via.placeholder.com/100" alt="Kanban Board">
+            <h3>Kanban Boards</h3>
+            <p>Organize tasks and track progress with visual tools.</p>
+            <a href="kanban.html" class="cta-button">Access Kanban Board</a>
         </div>
-
-        <div class="step">
-            <h3>Step 3: Customize & Organize</h3>
-            <p>Use the STAIRS tools to edit, plan, and structure your project.</p>
+        <div class="feature">
+            <img src="https://via.placeholder.com/100" alt="Community">
+            <h3>Community Support</h3>
+            <p>Connect with like-minded individuals and collaborate on projects.</p>
         </div>
-
-        <div class="step">
-            <h3>Step 4: Track Your Progress</h3>
-            <p>Monitor your progress using Kanban boards, task lists, and analytics.</p>
-        </div>
-
-        <div class="step">
-            <h3>Step 5: Share & Collaborate</h3>
-            <p>Connect with the STAIRS community for feedback and support.</p>
-        </div>
-    </div>
+    </section>
 
     <footer>
-        <p>&copy; 2025 STAIRS. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        <div class="footer-links">
+            <a href="https://dealegear.wixsite.com/meusite" target="_blank">DealeGear</a>
+            <a href="#">3GTO</a>
+            <a href="#">MyHeart</a>
+            <a href="#">UnderSea</a>
+            <a href="#">OneVision</a>
+            <a href="#">OneDAO</a>
+            <a href="#">VA</a>
+            <a href="#">BF</a>
+            <a href="#">Oxygen</a>
+            <a href="#">Segnetic</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            <a href="https://twitter.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter"></a>
+        </div>
+        <p>&copy; 2025 STAIRS. All rights reserved.</p>
     </footer>
 </body>
 </html>
