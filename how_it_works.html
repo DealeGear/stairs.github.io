@@ -50,6 +50,19 @@
             margin: 20px 0;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .step img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .step-content {
+            flex: 1;
             text-align: left;
         }
 
@@ -82,14 +95,14 @@
                 padding: 10px;
             }
 
-            nav {
+            .step {
                 flex-direction: column;
+                align-items: center;
             }
 
-            nav a {
-                padding: 10px;
-                text-align: center;
-                display: block;
+            .step img {
+                width: 80px;
+                height: 80px;
             }
         }
     </style>
@@ -111,28 +124,43 @@
         <h2>Follow These Steps to Success</h2>
 
         <div class="step">
-            <h3>Step 1: Choose Your Project Type</h3>
-            <p>Decide whether your project is for personal satisfaction, business, or career growth.</p>
+            <img src="https://via.placeholder.com/100" alt="Choose Project Type">
+            <div class="step-content">
+                <h3>Step 1: Choose Your Project Type</h3>
+                <p>Decide whether your project is for personal satisfaction, business, or career growth.</p>
+            </div>
         </div>
 
         <div class="step">
-            <h3>Step 2: Select a Template</h3>
-            <p>Browse and choose a customizable template to fit your needs.</p>
+            <img src="https://via.placeholder.com/100" alt="Select a Template">
+            <div class="step-content">
+                <h3>Step 2: Select a Template</h3>
+                <p>Browse and choose a customizable template to fit your needs.</p>
+            </div>
         </div>
 
         <div class="step">
-            <h3>Step 3: Customize & Organize</h3>
-            <p>Use the STAIRS tools to edit, plan, and structure your project.</p>
+            <img src="https://via.placeholder.com/100" alt="Customize & Organize">
+            <div class="step-content">
+                <h3>Step 3: Customize & Organize</h3>
+                <p>Use the STAIRS tools to edit, plan, and structure your project.</p>
+            </div>
         </div>
 
         <div class="step">
-            <h3>Step 4: Track Your Progress</h3>
-            <p>Monitor your progress using Kanban boards, task lists, and analytics.</p>
+            <img src="https://via.placeholder.com/100" alt="Track Progress">
+            <div class="step-content">
+                <h3>Step 4: Track Your Progress</h3>
+                <p>Monitor your progress using Kanban boards, task lists, and analytics.</p>
+            </div>
         </div>
 
         <div class="step">
-            <h3>Step 5: Share & Collaborate</h3>
-            <p>Connect with the STAIRS community for feedback and support.</p>
+            <img src="https://via.placeholder.com/100" alt="Share & Collaborate">
+            <div class="step-content">
+                <h3>Step 5: Share & Collaborate</h3>
+                <p>Connect with the STAIRS community for feedback and support.</p>
+            </div>
         </div>
     </div>
 
