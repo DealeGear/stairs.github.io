@@ -91,24 +91,47 @@
 
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #333;
+            padding: 30px;
+            background-color: #222;
             color: white;
         }
 
-        footer a {
-            color: #4CAF50;
-            text-decoration: none;
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
         }
 
-        footer a:hover {
+        .footer-links a {
+            color: #4CAF50;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .footer-links a:hover {
             text-decoration: underline;
         }
 
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+
         @media (max-width: 768px) {
-            .template-grid {
-                grid-template-columns: 1fr;
-                padding: 10px;
+            .features {
+                flex-direction: column;
+                align-items: center;
             }
             
             nav {
