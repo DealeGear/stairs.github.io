@@ -13,7 +13,7 @@
         }
 
         header {
-            background-color: #FF0000;
+            background-color: #4CAF50;
             color: white;
             padding: 15px;
             text-align: center;
@@ -61,6 +61,8 @@
             font-size: 1.2rem;
             text-decoration: none;
             border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
         }
 
         .cta-button:hover {
@@ -70,7 +72,7 @@
         .features {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: center;
             padding: 20px;
         }
 
@@ -132,6 +134,13 @@
             width: 24px;
             height: 24px;
         }
+
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -148,18 +157,23 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    
-        <section id="features" class="features">
+    <section class="hero">
+        <h1>Step Up Your Ideas with STAIRS</h1>
+        <p>Turn your hobbies, goals, or business plans into actionable projects with ease.</p>
+    </section>
+
+    <section id="features" class="features">
         <div class="feature">
             <img src="https://via.placeholder.com/100" alt="Templates">
             <h3>Customizable Templates</h3>
             <p>Choose from a wide range of templates to kickstart your projects.</p>
             <a href="custom_templates_page.html" class="cta-button">Explore Templates</a>
         </div>
-        
-            <div style="text-align: center; margin-top: 10px;">
-                <a href="kanban.html" class="cta-button">Access Kanban Board</a>
-            </div>
+        <div class="feature">
+            <img src="https://via.placeholder.com/100" alt="Kanban Board">
+            <h3>Kanban Boards</h3>
+            <p>Organize tasks and track progress with visual tools.</p>
+            <a href="kanban.html" class="cta-button">Access Kanban Board</a>
         </div>
         <div class="feature">
             <img src="https://via.placeholder.com/100" alt="Community">
