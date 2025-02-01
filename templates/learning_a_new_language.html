@@ -135,6 +135,16 @@
                 align-items: center;
             }
         }
+/* Estilizando a imagem pequena */
+        .thumbnail {
+            width: 150px; /* Define o tamanho da miniatura */
+            cursor: pointer; /* Muda o cursor para indicar que a imagem é clicável */
+            transition: transform 0.2s; /* Efeito suave */
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1); /* Aumenta levemente ao passar o mouse */
+        }
         
     </style>
 </head>
@@ -162,7 +172,12 @@
         Your browser does not support the audio element.
     </audio>
         </section>
-        
+        <section>
+        <!-- Link para a imagem maior -->
+    <a href="../img/mapa_mental.jpg" target="_blank">
+        <img src="../img/mapa_mental.jpg" alt="Clique para ampliar" class="thumbnail">
+    </a>
+        </section>section>
         <section>
             <h2>1. Define Your Goal (Plan)</h2>
             <ul>
