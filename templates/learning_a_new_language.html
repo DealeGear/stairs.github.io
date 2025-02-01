@@ -135,19 +135,11 @@
                 align-items: center;
             }
         }
-/* Estilizando a imagem pequena */
-        .thumbnail {
-            width: 100px; /* Define o tamanho da miniatura */
-            cursor: pointer; /* Muda o cursor para indicar que a imagem é clicável */
-            transition: transform 0.2s; /* Efeito suave */
-            display: flex;
-            justify-content: center; /* Centraliza horizontalmente */
-            align-items: center; /* Centraliza verticalmente (se necessário) */
-           
-        }
 
-        .thumbnail:hover {
-            transform: scale(1.2); /* Aumenta levemente ao passar o mouse */
+.mind-map {
+            max-width: 50%;
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
         
     </style>
@@ -251,7 +243,7 @@
         </section>
     </main>
 
-   <section>
+   <section class="mind-map">
        <!-- Ícone clicável que abre a imagem grande -->
         <a href="../img/mapa_mental.jpg" target="_blank">
             <img src="../img/icon_mapa_mental.jpg" alt="Ver imagem completa" class="icon">
