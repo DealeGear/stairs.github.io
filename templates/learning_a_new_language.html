@@ -78,21 +78,19 @@
             margin-top: 20px;
             text-align: center;
         }
-
-        
-
-        @media (max-width: 768px) {
-            .features {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-            
+     
            ul li {
                 font-size: 1rem;
             }
         
                 footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #222;
+            color: white;
+        }
+
+        footer {
             text-align: center;
             padding: 30px;
             background-color: #222;
@@ -126,14 +124,17 @@
             display: inline-block;
         }
 
-    
         .social-icons img {
-    width: 24px; /* Ajuste o valor conforme necessário */
-    height: 24px; /* Ajuste o valor conforme necessário */
-    transition: transform 0.3s ease; /* Efeito opcional ao passar o mouse */
-}
+            width: 24px;
+            height: 24px;
+        }
 
-
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
         
     </style>
 </head>
