@@ -122,7 +122,7 @@
       border: 1px solid #ccc;
       padding: 15px;
       margin: 20px auto;
-      max-width: 600px;
+      max-width: 800px;
       border-radius: 8px;
       display: none;
     }
@@ -208,14 +208,62 @@
   <!-- Painel de Customização -->
   <div id="customizationPanel">
     <h2>Customize This Page</h2>
+    <!-- Cabeçalho -->
     <label for="customHeader">Header Title:</label>
     <input type="text" id="customHeader" placeholder="Enter new header title">
     
-    <label for="customSection1">Section 1 Title (Define Your Goal):</label>
-    <input type="text" id="customSection1" placeholder="Enter new title for Section 1">
+    <!-- Section 1 -->
+    <label for="customSection1Title">Section 1 Title (Define Your Goal):</label>
+    <input type="text" id="customSection1Title" placeholder="Enter new title for Section 1">
     
     <label for="customSection1List">Section 1 List Items (separated by semicolon):</label>
     <textarea id="customSection1List" rows="4" placeholder="Enter list items separated by ;"></textarea>
+    
+    <!-- Section 2 -->
+    <label for="customSection2Title">Section 2 Title (Gather the Right Tools):</label>
+    <input type="text" id="customSection2Title" placeholder="Enter new title for Section 2">
+    
+    <label for="customSection2List">Section 2 List Items (separated by semicolon):</label>
+    <textarea id="customSection2List" rows="4" placeholder="Enter list items separated by ;"></textarea>
+    
+    <!-- Section 3 -->
+    <label for="customSection3Title">Section 3 Title (Develop a Study Routine):</label>
+    <input type="text" id="customSection3Title" placeholder="Enter new title for Section 3">
+    
+    <label for="customSection3List">Section 3 List Items (separated by semicolon):</label>
+    <textarea id="customSection3List" rows="4" placeholder="Enter list items separated by ;"></textarea>
+    
+    <!-- Section 4 -->
+    <label for="customSection4Title">Section 4 Title (Apply PDCA):</label>
+    <input type="text" id="customSection4Title" placeholder="Enter new title for Section 4">
+    
+    <label for="customSection4List">Section 4 List Items (separated by semicolon):</label>
+    <textarea id="customSection4List" rows="4" placeholder="Enter list items separated by ;"></textarea>
+    
+    <!-- Section 5 -->
+    <label for="customSection5Title">Section 5 Title (Overcome Common Challenges):</label>
+    <input type="text" id="customSection5Title" placeholder="Enter new title for Section 5">
+    
+    <label for="customSection5List">Section 5 List Items (separated by semicolon):</label>
+    <textarea id="customSection5List" rows="4" placeholder="Enter list items separated by ;"></textarea>
+    
+    <!-- Section 6 -->
+    <label for="customSection6Title">Section 6 Title (Track Progress & Celebrate Wins):</label>
+    <input type="text" id="customSection6Title" placeholder="Enter new title for Section 6">
+    
+    <label for="customSection6List">Section 6 List Items (separated by semicolon):</label>
+    <textarea id="customSection6List" rows="4" placeholder="Enter list items separated by ;"></textarea>
+    
+    <!-- Section 7 -->
+    <label for="customSection7Title">Section 7 Title (Expand and Maintain Your Skills):</label>
+    <input type="text" id="customSection7Title" placeholder="Enter new title for Section 7">
+    
+    <label for="customSection7List">Section 7 List Items (separated by semicolon):</label>
+    <textarea id="customSection7List" rows="4" placeholder="Enter list items separated by ;"></textarea>
+    
+    <!-- Parágrafo Final -->
+    <label for="customFinalParagraph">Final Paragraph:</label>
+    <textarea id="customFinalParagraph" rows="3" placeholder="Enter new final paragraph"></textarea>
     
     <button onclick="applyCustomization()">Save Customization</button>
   </div>
@@ -229,6 +277,7 @@
       </audio>
     </section>
     
+    <!-- Section 1 -->
     <section id="section1">
       <h2 id="section1Title">1. Define Your Goal (Plan)</h2>
       <ul id="section1List">
@@ -238,20 +287,22 @@
         <li>Choose a language learning method: (Self-study, language school, online courses, immersion, tutoring, etc.)</li>
       </ul>
     </section>
-
+    
+    <!-- Section 2 -->
     <section>
-      <h2>2. Gather the Right Tools and Resources</h2>
-      <ul>
+      <h2 id="section2Title">2. Gather the Right Tools and Resources</h2>
+      <ul id="section2List">
         <li>Apps &amp; Platforms: Duolingo, Babbel, Anki, LingQ, Pimsleur, Busuu</li>
         <li>Books &amp; Courses: Textbooks, grammar guides, audiobooks</li>
         <li>Practice Partners: Language exchange apps (Tandem, HelloTalk), online communities, local meetups</li>
         <li>Entertainment &amp; Immersion: Podcasts, YouTube channels, movies, TV shows, music in the target language</li>
       </ul>
     </section>
-
+    
+    <!-- Section 3 -->
     <section>
-      <h2>3. Develop a Study Routine (Do)</h2>
-      <ul>
+      <h2 id="section3Title">3. Develop a Study Routine (Do)</h2>
+      <ul id="section3List">
         <li>Daily Schedule: Set specific times to practice reading, writing, speaking, and listening</li>
         <li>Microlearning: Use flashcards, quick exercises, and small challenges daily</li>
         <li>Shadowing Technique: Repeat after native speakers to improve pronunciation</li>
@@ -259,47 +310,52 @@
         <li>Writing Practice: Start a journal, write social media posts, or engage in online forums</li>
       </ul>
     </section>
-
+    
+    <!-- Section 4 -->
     <section>
-      <h2>4. Apply PDCA (Check &amp; Improve)</h2>
-      <ul>
+      <h2 id="section4Title">4. Apply PDCA (Check &amp; Improve)</h2>
+      <ul id="section4List">
         <li>Plan: Adjust your methods and strategies based on progress</li>
         <li>Do: Keep track of daily practice using apps or a habit tracker</li>
         <li>Check: Test yourself regularly with quizzes, mock conversations, and self-recordings</li>
         <li>Act: Improve weak areas by changing study strategies, focusing on difficult topics, or increasing immersion</li>
       </ul>
     </section>
-
+    
+    <!-- Section 5 -->
     <section>
-      <h2>5. Overcome Common Challenges</h2>
-      <ul>
+      <h2 id="section5Title">5. Overcome Common Challenges</h2>
+      <ul id="section5List">
         <li>Lack of Time: Use dead time (commuting, waiting in line) for listening or flashcards</li>
         <li>Fear of Speaking: Start with simple phrases, use AI/chatbots, or practice with non-judgmental partners</li>
         <li>Lack of Motivation: Track milestones, celebrate small wins, find a study group</li>
         <li>Plateauing: Change methods, explore new topics, increase immersion</li>
       </ul>
     </section>
-
+    
+    <!-- Section 6 -->
     <section>
-      <h2>6. Track Progress &amp; Celebrate Wins</h2>
-      <ul>
+      <h2 id="section6Title">6. Track Progress &amp; Celebrate Wins</h2>
+      <ul id="section6List">
         <li>Set Milestones: Example - "Hold a 5-minute conversation in 3 months"</li>
         <li>Measure Fluency: Use CEFR levels (A1, A2, B1, etc.), self-assessments, or tutor feedback</li>
         <li>Celebrate Achievements: Reward yourself for completing courses, reaching goals, or making progress</li>
       </ul>
     </section>
-
+    
+    <!-- Section 7 -->
     <section>
-      <h2>7. Expand and Maintain Your Skills</h2>
-      <ul>
+      <h2 id="section7Title">7. Expand and Maintain Your Skills</h2>
+      <ul id="section7List">
         <li>Join Online Communities: Reddit, Discord, Facebook groups for language learners</li>
         <li>Consume Native Content: Books, news articles, social media in the target language</li>
         <li>Continue Practicing: Travel, make friends who speak the language, or start new projects using it</li>
       </ul>
     </section>
-
+    
+    <!-- Parágrafo Final -->
     <section>
-      <p>By following this structured approach, you can successfully learn a new language while continuously improving and adapting your methods. Ready to start?</p>
+      <p id="finalParagraph">By following this structured approach, you can successfully learn a new language while continuously improving and adapting your methods. Ready to start?</p>
     </section>
   </main>
 
@@ -495,10 +551,10 @@
       }
     };
 
-    // Função para alterar idioma e atualizar os textos das seções
+    // Função para alterar idioma e atualizar os textos personalizados ou os padrões
     function changeLanguage(lang) {
       const texts = translations[lang];
-      // Atualiza o título do cabeçalho
+      // Atualiza o cabeçalho
       document.getElementById("pageHeader").innerText = texts.pageHeader;
       
       // Atualiza a Section 1
@@ -512,128 +568,93 @@
       });
       
       // Atualiza a Section 2
-      const section2Header = document.querySelector("main section:nth-of-type(2) h2");
-      if(section2Header) {
-        section2Header.innerText = texts.section2Title;
-      }
-      const section2List = document.querySelector("main section:nth-of-type(2) ul");
-      if(section2List) {
-        section2List.innerHTML = "";
-        texts.section2List.forEach(item => {
-          const li = document.createElement("li");
-          li.innerText = item;
-          section2List.appendChild(li);
-        });
-      }
+      document.getElementById("section2Title").innerText = texts.section2Title;
+      const section2List = document.getElementById("section2List");
+      section2List.innerHTML = "";
+      texts.section2List.forEach(item => {
+        const li = document.createElement("li");
+        li.innerText = item;
+        section2List.appendChild(li);
+      });
       
       // Atualiza a Section 3
-      const section3Header = document.querySelector("main section:nth-of-type(3) h2");
-      if(section3Header) {
-        section3Header.innerText = texts.section3Title;
-      }
-      const section3List = document.querySelector("main section:nth-of-type(3) ul");
-      if(section3List) {
-        section3List.innerHTML = "";
-        texts.section3List.forEach(item => {
-          const li = document.createElement("li");
-          li.innerText = item;
-          section3List.appendChild(li);
-        });
-      }
+      document.getElementById("section3Title").innerText = texts.section3Title;
+      const section3List = document.getElementById("section3List");
+      section3List.innerHTML = "";
+      texts.section3List.forEach(item => {
+        const li = document.createElement("li");
+        li.innerText = item;
+        section3List.appendChild(li);
+      });
       
       // Atualiza a Section 4
-      const section4Header = document.querySelector("main section:nth-of-type(4) h2");
-      if(section4Header) {
-        section4Header.innerText = texts.section4Title;
-      }
-      const section4List = document.querySelector("main section:nth-of-type(4) ul");
-      if(section4List) {
-        section4List.innerHTML = "";
-        texts.section4List.forEach(item => {
-          const li = document.createElement("li");
-          li.innerText = item;
-          section4List.appendChild(li);
-        });
-      }
+      document.getElementById("section4Title").innerText = texts.section4Title;
+      const section4List = document.getElementById("section4List");
+      section4List.innerHTML = "";
+      texts.section4List.forEach(item => {
+        const li = document.createElement("li");
+        li.innerText = item;
+        section4List.appendChild(li);
+      });
       
       // Atualiza a Section 5
-      const section5Header = document.querySelector("main section:nth-of-type(5) h2");
-      if(section5Header) {
-        section5Header.innerText = texts.section5Title;
-      }
-      const section5List = document.querySelector("main section:nth-of-type(5) ul");
-      if(section5List) {
-        section5List.innerHTML = "";
-        texts.section5List.forEach(item => {
-          const li = document.createElement("li");
-          li.innerText = item;
-          section5List.appendChild(li);
-        });
-      }
+      document.getElementById("section5Title").innerText = texts.section5Title;
+      const section5List = document.getElementById("section5List");
+      section5List.innerHTML = "";
+      texts.section5List.forEach(item => {
+        const li = document.createElement("li");
+        li.innerText = item;
+        section5List.appendChild(li);
+      });
       
       // Atualiza a Section 6
-      const section6Header = document.querySelector("main section:nth-of-type(6) h2");
-      if(section6Header) {
-        section6Header.innerText = texts.section6Title;
-      }
-      const section6List = document.querySelector("main section:nth-of-type(6) ul");
-      if(section6List) {
-        section6List.innerHTML = "";
-        texts.section6List.forEach(item => {
-          const li = document.createElement("li");
-          li.innerText = item;
-          section6List.appendChild(li);
-        });
-      }
+      document.getElementById("section6Title").innerText = texts.section6Title;
+      const section6List = document.getElementById("section6List");
+      section6List.innerHTML = "";
+      texts.section6List.forEach(item => {
+        const li = document.createElement("li");
+        li.innerText = item;
+        section6List.appendChild(li);
+      });
       
       // Atualiza a Section 7
-      const section7Header = document.querySelector("main section:nth-of-type(7) h2");
-      if(section7Header) {
-        section7Header.innerText = texts.section7Title;
-      }
-      const section7List = document.querySelector("main section:nth-of-type(7) ul");
-      if(section7List) {
-        section7List.innerHTML = "";
-        texts.section7List.forEach(item => {
-          const li = document.createElement("li");
-          li.innerText = item;
-          section7List.appendChild(li);
-        });
-      }
+      document.getElementById("section7Title").innerText = texts.section7Title;
+      const section7List = document.getElementById("section7List");
+      section7List.innerHTML = "";
+      texts.section7List.forEach(item => {
+        const li = document.createElement("li");
+        li.innerText = item;
+        section7List.appendChild(li);
+      });
       
-      // Atualiza o parágrafo final (assumindo que é o último <section> em <main>)
-      const finalPara = document.querySelector("main section:last-of-type p");
-      if(finalPara) {
-        finalPara.innerText = texts.finalParagraph;
-      }
+      // Atualiza o parágrafo final
+      document.getElementById("finalParagraph").innerText = texts.finalParagraph;
     }
 
     // Função para mostrar ou esconder o painel de customização
     function toggleCustomization() {
       const panel = document.getElementById("customizationPanel");
-      panel.style.display = panel.style.display === "none" || panel.style.display === "" ? "block" : "none";
+      panel.style.display = (panel.style.display === "none" || panel.style.display === "") ? "block" : "none";
     }
 
     // Função para aplicar as personalizações definidas pelo usuário
     function applyCustomization() {
-      // Atualiza o título do cabeçalho
+      // Atualiza o cabeçalho
       const newHeader = document.getElementById("customHeader").value;
       if (newHeader) {
         document.getElementById("pageHeader").innerText = newHeader;
       }
       
-      // Atualiza o título da primeira seção
-      const newSectionTitle = document.getElementById("customSection1").value;
-      if (newSectionTitle) {
-        document.getElementById("section1Title").innerText = newSectionTitle;
+      // Section 1
+      const newSection1Title = document.getElementById("customSection1Title").value;
+      if (newSection1Title) {
+        document.getElementById("section1Title").innerText = newSection1Title;
       }
-      
-      // Atualiza os itens da lista da primeira seção
-      const newListItems = document.getElementById("customSection1List").value;
-      if (newListItems) {
-        const items = newListItems.split(";").map(item => item.trim()).filter(item => item !== "");
+      const newSection1List = document.getElementById("customSection1List").value;
+      if (newSection1List) {
+        const items = newSection1List.split(";").map(item => item.trim()).filter(item => item !== "");
         const ul = document.getElementById("section1List");
-        ul.innerHTML = ""; // Limpa a lista atual
+        ul.innerHTML = "";
         items.forEach(item => {
           const li = document.createElement("li");
           li.innerText = item;
@@ -641,10 +662,103 @@
         });
       }
       
-      // Esconde o painel de customização após salvar
-      toggleCustomization();
-    }
-  </script>
-
-</body>
-</html>
+      // Section 2
+      const newSection2Title = document.getElementById("customSection2Title").value;
+      if (newSection2Title) {
+        document.getElementById("section2Title").innerText = newSection2Title;
+      }
+      const newSection2List = document.getElementById("customSection2List").value;
+      if (newSection2List) {
+        const items = newSection2List.split(";").map(item => item.trim()).filter(item => item !== "");
+        const ul = document.getElementById("section2List");
+        ul.innerHTML = "";
+        items.forEach(item => {
+          const li = document.createElement("li");
+          li.innerText = item;
+          ul.appendChild(li);
+        });
+      }
+      
+      // Section 3
+      const newSection3Title = document.getElementById("customSection3Title").value;
+      if (newSection3Title) {
+        document.getElementById("section3Title").innerText = newSection3Title;
+      }
+      const newSection3List = document.getElementById("customSection3List").value;
+      if (newSection3List) {
+        const items = newSection3List.split(";").map(item => item.trim()).filter(item => item !== "");
+        const ul = document.getElementById("section3List");
+        ul.innerHTML = "";
+        items.forEach(item => {
+          const li = document.createElement("li");
+          li.innerText = item;
+          ul.appendChild(li);
+        });
+      }
+      
+      // Section 4
+      const newSection4Title = document.getElementById("customSection4Title").value;
+      if (newSection4Title) {
+        document.getElementById("section4Title").innerText = newSection4Title;
+      }
+      const newSection4List = document.getElementById("customSection4List").value;
+      if (newSection4List) {
+        const items = newSection4List.split(";").map(item => item.trim()).filter(item => item !== "");
+        const ul = document.getElementById("section4List");
+        ul.innerHTML = "";
+        items.forEach(item => {
+          const li = document.createElement("li");
+          li.innerText = item;
+          ul.appendChild(li);
+        });
+      }
+      
+      // Section 5
+      const newSection5Title = document.getElementById("customSection5Title").value;
+      if (newSection5Title) {
+        document.getElementById("section5Title").innerText = newSection5Title;
+      }
+      const newSection5List = document.getElementById("customSection5List").value;
+      if (newSection5List) {
+        const items = newSection5List.split(";").map(item => item.trim()).filter(item => item !== "");
+        const ul = document.getElementById("section5List");
+        ul.innerHTML = "";
+        items.forEach(item => {
+          const li = document.createElement("li");
+          li.innerText = item;
+          ul.appendChild(li);
+        });
+      }
+      
+      // Section 6
+      const newSection6Title = document.getElementById("customSection6Title").value;
+      if (newSection6Title) {
+        document.getElementById("section6Title").innerText = newSection6Title;
+      }
+      const newSection6List = document.getElementById("customSection6List").value;
+      if (newSection6List) {
+        const items = newSection6List.split(";").map(item => item.trim()).filter(item => item !== "");
+        const ul = document.getElementById("section6List");
+        ul.innerHTML = "";
+        items.forEach(item => {
+          const li = document.createElement("li");
+          li.innerText = item;
+          ul.appendChild(li);
+        });
+      }
+      
+      // Section 7
+      const newSection7Title = document.getElementById("customSection7Title").value;
+      if (newSection7Title) {
+        document.getElementById("section7Title").innerText = newSection7Title;
+      }
+      const newSection7List = document.getElementById("customSection7List").value;
+      if (newSection7List) {
+        const items = newSection7List.split(";").map(item => item.trim()).filter(item => item !== "");
+        const ul = document.getElementById("section7List");
+        ul.innerHTML = "";
+        items.forEach(item => {
+          const li = document.createElement("li");
+          li.innerText = item;
+          ul.appendChild(li);
+    
