@@ -385,12 +385,251 @@
   </footer>
 
   <script>
+    // Objeto com traduções para inglês, espanhol e português
+    const translations = {
+      en: {
+        pageHeader: "Learning a New Language",
+        section1Title: "1. Define Your Goal (Plan)",
+        section1List: [
+          "Why do you want to learn this language? (Career, travel, cultural interest, personal challenge, etc.)",
+          "What is your desired level of fluency? (Basic communication, professional fluency, native-like proficiency)",
+          "Set a timeframe: When do you want to achieve a specific milestone?",
+          "Choose a language learning method: (Self-study, language school, online courses, immersion, tutoring, etc.)"
+        ],
+        section2Title: "2. Gather the Right Tools and Resources",
+        section2List: [
+          "Apps & Platforms: Duolingo, Babbel, Anki, LingQ, Pimsleur, Busuu",
+          "Books & Courses: Textbooks, grammar guides, audiobooks",
+          "Practice Partners: Language exchange apps (Tandem, HelloTalk), online communities, local meetups",
+          "Entertainment & Immersion: Podcasts, YouTube channels, movies, TV shows, music in the target language"
+        ],
+        section3Title: "3. Develop a Study Routine (Do)",
+        section3List: [
+          "Daily Schedule: Set specific times to practice reading, writing, speaking, and listening",
+          "Microlearning: Use flashcards, quick exercises, and small challenges daily",
+          "Shadowing Technique: Repeat after native speakers to improve pronunciation",
+          "Speaking Practice: Join conversation groups, find a language buddy, or hire a tutor",
+          "Writing Practice: Start a journal, write social media posts, or engage in online forums"
+        ],
+        section4Title: "4. Apply PDCA (Check & Improve)",
+        section4List: [
+          "Plan: Adjust your methods and strategies based on progress",
+          "Do: Keep track of daily practice using apps or a habit tracker",
+          "Check: Test yourself regularly with quizzes, mock conversations, and self-recordings",
+          "Act: Improve weak areas by changing study strategies, focusing on difficult topics, or increasing immersion"
+        ],
+        section5Title: "5. Overcome Common Challenges",
+        section5List: [
+          "Lack of Time: Use dead time (commuting, waiting in line) for listening or flashcards",
+          "Fear of Speaking: Start with simple phrases, use AI/chatbots, or practice with non-judgmental partners",
+          "Lack of Motivation: Track milestones, celebrate small wins, find a study group",
+          "Plateauing: Change methods, explore new topics, increase immersion"
+        ],
+        section6Title: "6. Track Progress & Celebrate Wins",
+        section6List: [
+          "Set Milestones: Example - 'Hold a 5-minute conversation in 3 months'",
+          "Measure Fluency: Use CEFR levels (A1, A2, B1, etc.), self-assessments, or tutor feedback",
+          "Celebrate Achievements: Reward yourself for completing courses, reaching goals, or making progress"
+        ],
+        section7Title: "7. Expand and Maintain Your Skills",
+        section7List: [
+          "Join Online Communities: Reddit, Discord, Facebook groups for language learners",
+          "Consume Native Content: Books, news articles, social media in the target language",
+          "Continue Practicing: Travel, make friends who speak the language, or start new projects using it"
+        ],
+        finalParagraph: "By following this structured approach, you can successfully learn a new language while continuously improving and adapting your methods. Ready to start?"
+      },
+      es: {
+        pageHeader: "Aprendiendo un Nuevo Idioma",
+        section1Title: "1. Define tu Meta (Plan)",
+        section1List: [
+          "¿Por qué quieres aprender este idioma? (Carrera, viaje, interés cultural, desafío personal, etc.)",
+          "¿Qué nivel de fluidez deseas? (Comunicación básica, fluidez profesional, competencia similar a la nativa)",
+          "Establece un plazo: ¿Cuándo quieres lograr un hito específico?",
+          "Elige un método para aprender el idioma: (Autoestudio, academia de idiomas, cursos en línea, inmersión, tutoría, etc.)"
+        ],
+        section2Title: "2. Reúne las Herramientas y Recursos Adecuados",
+        section2List: [
+          "Apps y Plataformas: Duolingo, Babbel, Anki, LingQ, Pimsleur, Busuu",
+          "Libros y Cursos: Libros de texto, guías gramaticales, audiolibros",
+          "Compañeros de Práctica: Aplicaciones de intercambio de idiomas (Tandem, HelloTalk), comunidades en línea, encuentros locales",
+          "Entretenimiento e Inmersión: Podcasts, canales de YouTube, películas, series de TV, música en el idioma objetivo"
+        ],
+        section3Title: "3. Desarrolla una Rutina de Estudio (Haz)",
+        section3List: [
+          "Horario Diario: Establece tiempos específicos para practicar lectura, escritura, conversación y escucha",
+          "Microaprendizaje: Usa tarjetas, ejercicios rápidos y pequeños desafíos diarios",
+          "Técnica de Sombreado: Repite después de hablantes nativos para mejorar la pronunciación",
+          "Práctica de Conversación: Únete a grupos de conversación, encuentra un compañero de idioma o contrata un tutor",
+          "Práctica de Escritura: Empieza un diario, escribe en redes sociales o participa en foros en línea"
+        ],
+        section4Title: "4. Aplica PDCA (Revisa y Mejora)",
+        section4List: [
+          "Plan: Ajusta tus métodos y estrategias según el progreso",
+          "Haz: Lleva un registro diario de la práctica utilizando apps o un rastreador de hábitos",
+          "Revisa: Evalúate regularmente con cuestionarios, simulacros de conversaciones y grabaciones",
+          "Actúa: Mejora las áreas débiles cambiando las estrategias de estudio, enfocándote en temas difíciles o aumentando la inmersión"
+        ],
+        section5Title: "5. Supera los Desafíos Comunes",
+        section5List: [
+          "Falta de Tiempo: Aprovecha los momentos muertos (viajes, esperas) para escuchar o usar tarjetas",
+          "Miedo a Hablar: Comienza con frases simples, usa IA/chatbots o practica con compañeros sin juicios",
+          "Falta de Motivación: Sigue hitos, celebra pequeños logros y encuentra un grupo de estudio",
+          "Estancamiento: Cambia métodos, explora nuevos temas, aumenta la inmersión"
+        ],
+        section6Title: "6. Rastrea el Progreso y Celebra los Logros",
+        section6List: [
+          "Establece Hitos: Ejemplo - 'Mantén una conversación de 5 minutos en 3 meses'",
+          "Mide la Fluidez: Usa los niveles del MCER (A1, A2, B1, etc.), autoevaluaciones o retroalimentación del tutor",
+          "Celebra los Logros: Recompénsate por completar cursos, alcanzar metas o hacer progresos"
+        ],
+        section7Title: "7. Amplía y Mantén tus Habilidades",
+        section7List: [
+          "Únete a Comunidades en Línea: Reddit, Discord, grupos de Facebook para estudiantes de idiomas",
+          "Consume Contenido Nativo: Libros, artículos de noticias, redes sociales en el idioma objetivo",
+          "Continúa Practicando: Viaja, haz amigos que hablen el idioma o inicia nuevos proyectos usándolo"
+        ],
+        finalParagraph: "Siguiendo este enfoque estructurado, puedes aprender un nuevo idioma con éxito mientras mejoras y adaptas tus métodos continuamente. ¿Listo para empezar?"
+      },
+      pt: {
+        pageHeader: "Aprendendo um Novo Idioma",
+        section1Title: "1. Defina Seu Objetivo (Plano)",
+        section1List: [
+          "Por que você quer aprender esse idioma? (Carreira, viagem, interesse cultural, desafio pessoal, etc.)",
+          "Qual é o seu nível desejado de fluência? (Comunicação básica, fluência profissional, proficiência semelhante à de um nativo)",
+          "Estabeleça um prazo: Quando você deseja alcançar um marco específico?",
+          "Escolha um método de aprendizado: (Autoestudo, escola de idiomas, cursos online, imersão, tutoria, etc.)"
+        ],
+        section2Title: "2. Reúna as Ferramentas e Recursos Adequados",
+        section2List: [
+          "Apps e Plataformas: Duolingo, Babbel, Anki, LingQ, Pimsleur, Busuu",
+          "Livros e Cursos: Livros didáticos, guias gramaticais, audiolivros",
+          "Parceiros de Prática: Apps de intercâmbio linguístico (Tandem, HelloTalk), comunidades online, encontros locais",
+          "Entretenimento e Imersão: Podcasts, canais do YouTube, filmes, séries, músicas no idioma alvo"
+        ],
+        section3Title: "3. Desenvolva uma Rotina de Estudos (Faça)",
+        section3List: [
+          "Horário Diário: Defina horários específicos para praticar leitura, escrita, fala e escuta",
+          "Microaprendizagem: Use flashcards, exercícios rápidos e pequenos desafios diariamente",
+          "Técnica de Shadowing: Repita após falantes nativos para melhorar a pronúncia",
+          "Prática de Conversação: Participe de grupos de conversação, encontre um parceiro linguístico ou contrate um tutor",
+          "Prática de Escrita: Comece um diário, escreva em redes sociais ou participe de fóruns online"
+        ],
+        section4Title: "4. Aplique PDCA (Verificar e Melhorar)",
+        section4List: [
+          "Planeje: Ajuste seus métodos e estratégias conforme o progresso",
+          "Faça: Registre sua prática diária utilizando apps ou um rastreador de hábitos",
+          "Verifique: Teste-se regularmente com quizzes, simulações de conversação e autoavaliações",
+          "Aja: Melhore áreas fracas alterando suas estratégias, focando em tópicos difíceis ou aumentando a imersão"
+        ],
+        section5Title: "5. Supere os Desafios Comuns",
+        section5List: [
+          "Falta de Tempo: Use momentos livres (deslocamentos, filas) para escutar ou usar flashcards",
+          "Medo de Falar: Comece com frases simples, use chatbots ou pratique com parceiros sem julgamentos",
+          "Falta de Motivação: Acompanhe metas, celebre pequenas vitórias e encontre um grupo de estudos",
+          "Estagnação: Mude os métodos, explore novos temas e aumente a imersão"
+        ],
+        section6Title: "6. Acompanhe o Progresso & Celebre Conquistas",
+        section6List: [
+          "Defina Metas: Exemplo - 'Conduza uma conversa de 5 minutos em 3 meses'",
+          "Meça a Fluência: Utilize níveis do Quadro Europeu (A1, A2, B1, etc.), autoavaliações ou feedback de tutores",
+          "Celebre Conquistas: Recompense-se por concluir cursos, atingir metas ou progredir"
+        ],
+        section7Title: "7. Expanda e Mantenha Suas Habilidades",
+        section7List: [
+          "Participe de Comunidades Online: Reddit, Discord, grupos no Facebook para estudantes de idiomas",
+          "Consuma Conteúdo Nativo: Livros, notícias, redes sociais no idioma alvo",
+          "Continue Praticando: Viaje, faça amizades com falantes do idioma ou inicie novos projetos utilizando-o"
+        ],
+        finalParagraph: "Seguindo essa abordagem estruturada, você pode aprender um novo idioma com sucesso enquanto melhora e adapta seus métodos continuamente. Pronto para começar?"
+      }
+    };
+
+    // Função para alterar idioma e atualizar os textos das seções
+    function changeLanguage(lang) {
+      const texts = translations[lang];
+      // Atualiza o cabeçalho
+      document.getElementById("pageHeader").innerText = texts.pageHeader;
+      
+      // Atualiza a Section 1
+      document.getElementById("section1Title").innerText = texts.section1Title;
+      const section1List = document.getElementById("section1List");
+      section1List.innerHTML = "";
+      texts.section1List.forEach(item => {
+        const li = document.createElement("li");
+        li.innerText = item;
+        section1List.appendChild(li);
+      });
+      
+      // Atualiza a Section 2
+      document.getElementById("section2Title").innerText = texts.section2Title;
+      const section2List = document.getElementById("section2List");
+      section2List.innerHTML = "";
+      texts.section2List.forEach(item => {
+        const li = document.createElement("li");
+        li.innerText = item;
+        section2List.appendChild(li);
+      });
+      
+      // Atualiza a Section 3
+      document.getElementById("section3Title").innerText = texts.section3Title;
+      const section3List = document.getElementById("section3List");
+      section3List.innerHTML = "";
+      texts.section3List.forEach(item => {
+        const li = document.createElement("li");
+        li.innerText = item;
+        section3List.appendChild(li);
+      });
+      
+      // Atualiza a Section 4
+      document.getElementById("section4Title").innerText = texts.section4Title;
+      const section4List = document.getElementById("section4List");
+      section4List.innerHTML = "";
+      texts.section4List.forEach(item => {
+        const li = document.createElement("li");
+        li.innerText = item;
+        section4List.appendChild(li);
+      });
+      
+      // Atualiza a Section 5
+      document.getElementById("section5Title").innerText = texts.section5Title;
+      const section5List = document.getElementById("section5List");
+      section5List.innerHTML = "";
+      texts.section5List.forEach(item => {
+        const li = document.createElement("li");
+        li.innerText = item;
+        section5List.appendChild(li);
+      });
+      
+      // Atualiza a Section 6
+      document.getElementById("section6Title").innerText = texts.section6Title;
+      const section6List = document.getElementById("section6List");
+      section6List.innerHTML = "";
+      texts.section6List.forEach(item => {
+        const li = document.createElement("li");
+        li.innerText = item;
+        section6List.appendChild(li);
+      });
+      
+      // Atualiza a Section 7
+      document.getElementById("section7Title").innerText = texts.section7Title;
+      const section7List = document.getElementById("section7List");
+      section7List.innerHTML = "";
+      texts.section7List.forEach(item => {
+        const li = document.createElement("li");
+        li.innerText = item;
+        section7List.appendChild(li);
+      });
+      
+      // Atualiza o parágrafo final
+      document.getElementById("finalParagraph").innerText = texts.finalParagraph;
+    }
+
     // Função para mostrar ou esconder o painel de customização
     function toggleCustomization() {
       const panel = document.getElementById("customizationPanel");
-      console.log("toggleCustomization called. Current display:", panel.style.display);
+      // Verifica o estado atual e alterna entre "none" e "block"
       panel.style.display = (panel.style.display === "none" || panel.style.display === "") ? "block" : "none";
-      console.log("New display:", panel.style.display);
     }
 
     // Função para aplicar as personalizações definidas pelo usuário
