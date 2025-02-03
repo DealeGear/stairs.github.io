@@ -1,263 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Plan Template - STAIRS</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-
-        header {
-            background-color: #FF0000;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        nav a:hover {
-            background-color: #575757;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        
-
-        .section-wrapper {
-            margin-bottom: 20px;
-            border-left: 5px solid #4CAF50;
-            background: #f1f1f1;
-            padding: 15px;
-        }
-
-        .section {
-            cursor: pointer;
-            margin: 0;
-        }
-
-        .section-content {
-            display: none;
-            padding-top: 10px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        .download-btn {
-            display: block;
-            text-align: center;
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            margin-top: 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: #222;
-            color: white;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: #4CAF50;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-
-        .social-icons {
-            margin-top: 10px;
-        }
-
-        .social-icons a {
-            margin: 0 10px;
-            display: inline-block;
-        }
-
-        .social-icons img {
-            width: 24px;
-            height: 24px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Plan Template - STAIRS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #FF0000;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      position: relative;
+    }
+    /* Botões de idioma no cabeçalho */
+    .lang-buttons {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+    .lang-buttons button {
+      margin-left: 5px;
+      padding: 5px 10px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    .lang-buttons button:hover {
+      background-color: #575757;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    .section-wrapper {
+      margin-bottom: 20px;
+      border-left: 5px solid #4CAF50;
+      background: #f1f1f1;
+      padding: 15px;
+    }
+    .section {
+      cursor: pointer;
+      margin: 0;
+    }
+    .section-content {
+      display: none;
+      padding-top: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .download-btn {
+      display: block;
+      text-align: center;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #222;
+      color: white;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .footer-links a {
+      color: #4CAF50;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    .social-icons {
+      margin-top: 10px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+    }
+    /* Painel de Customização */
+    #customizationPanel {
+      background-color: #eee;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 8px;
+      display: none;
+    }
+    #customizationPanel input,
+    #customizationPanel textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    #customizationPanel button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    #customizationPanel button:hover {
+      background-color: #45a049;
+    }
+    /* Botão para alternar o painel de customização */
+    #toggleCustomization {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    #toggleCustomization:hover {
+      background-color: #575757;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Business Plan Template</h1>
-        <p>A structured guide to help you build your business</p>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="custom_templates_page.html">Templates</a>
-        <a href="how_it_works.html">How It Works</a>
-        <a href="business_plan_template.html">Business Plan</a>
-        <a href="https://dealegear.wixsite.com/meusite" target="_blank">Visit DealeGear</a>
-    </nav>
+  <header>
+    <h1 id="pageHeader">Business Plan Template</h1>
+    <p id="pageSubHeader">A structured guide to help you build your business</p>
+    <!-- Botões de idioma -->
+    <div class="lang-buttons">
+      <button onclick="changeLanguage('en')">English</button>
+      <button onclick="changeLanguage('es')">Español</button>
+      <button onclick="changeLanguage('pt')">Português</button>
+    </div>
+  </header>
 
-    <div class="container">
-        <div class="section-wrapper">
-            <h2 class="section">Introduction</h2>
-            <div class="section-content">
-                <p>Define your business idea, mission, and objectives clearly...</p>
-                <p><strong>Example:</strong> A sustainable clothing brand focused on eco-friendly fashion and reducing environmental impact.</p>
-                <label for="business-type">Select Business Type:</label>
-                <select id="business-type" onchange="updateBusinessDetails()">
-                    <option value="default">Select an option</option>
-                    <option value="retail">Retail Store</option>
-                    <option value="service">Service Business</option>
-                    <option value="tech">Tech Startup</option>
-                </select>
-            </div>
-        </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="custom_templates_page.html">Templates</a>
+    <a href="how_it_works.html">How It Works</a>
+    <a href="business_plan_template.html">Business Plan</a>
+    <a href="https://dealegear.wixsite.com/meusite" target="_blank">Visit DealeGear</a>
+  </nav>
 
-        <div class="section-wrapper">
-            <h2 class="section">Market Analysis</h2>
-            <div class="section-content" id="market-analysis">
-                <p>Identify your target audience, competitors, and market trends.</p>
-                <p><strong>Example:</strong> A new coffee shop targeting young professionals in urban areas...</p>
-            </div>
-        </div>
+  <!-- Botão para exibir/ocultar o painel de customização -->
+  <button id="toggleCustomization" onclick="toggleCustomization()">Customize Content</button>
 
-        <div class="section-wrapper">
-            <h2 class="section">Financial Plan</h2>
-            <div class="section-content">
-                <p>Include projected revenue, expenses, and funding requirements.</p>
-                <table id="financial-table">
-                    <tr>
-                        <th>Category</th>
-                        <th>Estimated Cost</th>
-                    </tr>
-                    <tr>
-                        <td>Startup Costs</td>
-                        <td>$50,000</td>
-                    </tr>
-                    <tr>
-                        <td>Monthly Revenue</td>
-                        <td>$10,000</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+  <!-- Painel de Customização -->
+  <div id="customizationPanel">
+    <h2>Customize This Page</h2>
+    <label for="customHeader">Header Title:</label>
+    <input type="text" id="customHeader" placeholder="Enter new header title" />
 
-        <a href="#" class="download-btn" onclick="downloadPDF()">Download as PDF</a>
+    <label for="customSubHeader">Header Subtitle:</label>
+    <input type="text" id="customSubHeader" placeholder="Enter new header subtitle" />
+
+    <label for="customIntroductionTitle">Introduction Title:</label>
+    <input type="text" id="customIntroductionTitle" placeholder="Enter new Introduction title" />
+
+    <label for="customIntroductionContent">Introduction Content:</label>
+    <textarea id="customIntroductionContent" rows="3" placeholder="Enter new content for the Introduction section"></textarea>
+
+    <label for="customMarketTitle">Market Analysis Title:</label>
+    <input type="text" id="customMarketTitle" placeholder="Enter new Market Analysis title" />
+
+    <label for="customMarketContent">Market Analysis Content:</label>
+    <textarea id="customMarketContent" rows="3" placeholder="Enter new content for the Market Analysis section"></textarea>
+
+    <label for="customFinancialTitle">Financial Plan Title:</label>
+    <input type="text" id="customFinancialTitle" placeholder="Enter new Financial Plan title" />
+
+    <label for="customFinancialTable">Financial Table Rows (format: Category:Cost, separate rows with semicolon):</label>
+    <textarea id="customFinancialTable" rows="3" placeholder="Example: Startup Costs:$50,000, Monthly Revenue:$10,000"></textarea>
+
+    <button onclick="applyCustomization()">Save Customization</button>
+  </div>
+
+  <div class="container">
+    <!-- Introduction Section -->
+    <div class="section-wrapper">
+      <h2 class="section" id="introductionTitle">Introduction</h2>
+      <div class="section-content" id="introductionContent">
+        <p>Define your business idea, mission, and objectives clearly...</p>
+        <p><strong>Example:</strong> A sustainable clothing brand focused on eco-friendly fashion and reducing environmental impact.</p>
+        <label for="business-type">Select Business Type:</label>
+        <select id="business-type" onchange="updateBusinessDetails()">
+          <option value="default">Select an option</option>
+          <option value="retail">Retail Store</option>
+          <option value="service">Service Business</option>
+          <option value="tech">Tech Startup</option>
+          <option value="consulting">Consulting</option>
+          <option value="manufacturing">Manufacturing</option>
+        </select>
+      </div>
     </div>
 
-    
+    <!-- Market Analysis Section -->
+    <div class="section-wrapper">
+      <h2 class="section" id="marketAnalysisTitle">Market Analysis</h2>
+      <div class="section-content" id="marketAnalysisContent">
+        <p>Identify your target audience, competitors, and market trends.</p>
+        <p><strong>Example:</strong> A new coffee shop targeting young professionals in urban areas...</p>
+      </div>
+    </div>
 
-    <script>
-        document.querySelectorAll('.section').forEach(section => {
-            section.addEventListener('click', () => {
-                const content = section.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
-            });
+    <!-- Financial Plan Section -->
+    <div class="section-wrapper">
+      <h2 class="section" id="financialPlanTitle">Financial Plan</h2>
+      <div class="section-content">
+        <p>Include projected revenue, expenses, and funding requirements.</p>
+        <table id="financialTable">
+          <tr>
+            <th>Category</th>
+            <th>Estimated Cost</th>
+          </tr>
+          <tr>
+            <td>Startup Costs</td>
+            <td>$50,000</td>
+          </tr>
+          <tr>
+            <td>Monthly Revenue</td>
+            <td>$10,000</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <a href="#" class="download-btn" id="downloadBtn" onclick="downloadPDF()">Download as PDF</a>
+  </div>
+
+  <script>
+    // Traduções para inglês, espanhol e português
+    const translations = {
+      en: {
+        pageHeader: "Business Plan Template",
+        pageSubHeader: "A structured guide to help you build your business",
+        introductionTitle: "Introduction",
+        introductionContent: `<p>Define your business idea, mission, and objectives clearly...</p>
+          <p><strong>Example:</strong> A sustainable clothing brand focused on eco-friendly fashion and reducing environmental impact.</p>
+          <label for="business-type">Select Business Type:</label>`,
+        marketAnalysisTitle: "Market Analysis",
+        marketAnalysisContent: `<p>Identify your target audience, competitors, and market trends.</p>
+          <p><strong>Example:</strong> A new coffee shop targeting young professionals in urban areas...</p>`,
+        financialPlanTitle: "Financial Plan",
+        financialPlanTable: `<tr>
+              <th>Category</th>
+              <th>Estimated Cost</th>
+            </tr>
+            <tr>
+              <td>Startup Costs</td>
+              <td>$50,000</td>
+            </tr>
+            <tr>
+              <td>Monthly Revenue</td>
+              <td>$10,000</td>
+            </tr>`,
+        downloadBtn: "Download as PDF"
+      },
+      es: {
+        pageHeader: "Plantilla de Plan de Negocios",
+        pageSubHeader: "Una guía estructurada para ayudarte a construir tu negocio",
+        introductionTitle: "Introducción",
+        introductionContent: `<p>Define claramente tu idea de negocio, misión y objetivos...</p>
+          <p><strong>Ejemplo:</strong> Una marca de ropa sostenible enfocada en la moda ecológica y en reducir el impacto ambiental.</p>
+          <label for="business-type">Selecciona el Tipo de Negocio:</label>`,
+        marketAnalysisTitle: "Análisis de Mercado",
+        marketAnalysisContent: `<p>Identifica tu público objetivo, competidores y tendencias del mercado.</p>
+          <p><strong>Ejemplo:</strong> Una nueva cafetería dirigida a jóvenes profesionales en zonas urbanas...</p>`,
+        financialPlanTitle: "Plan Financiero",
+        financialPlanTable: `<tr>
+              <th>Categoría</th>
+              <th>Costo Estimado</th>
+            </tr>
+            <tr>
+              <td>Costos Iniciales</td>
+              <td>$50,000</td>
+            </tr>
+            <tr>
+              <td>Ingresos Mensuales</td>
+              <td>$10,000</td>
+            </tr>`,
+        downloadBtn: "Descargar como PDF"
+      },
+      pt: {
+        pageHeader: "Modelo de Plano de Negócios",
+        pageSubHeader: "Um guia estruturado para ajudar você a construir seu negócio",
+        introductionTitle: "Introdução",
+        introductionContent: `<p>Defina claramente sua ideia de negócio, missão e objetivos...</p>
+          <p><strong>Exemplo:</strong> Uma marca de roupas sustentável focada em moda ecológica e na redução do impacto ambiental.</p>
+          <label for="business-type">Selecione o Tipo de Negócio:</label>`,
+        marketAnalysisTitle: "Análise de Mercado",
+        marketAnalysisContent: `<p>Identifique seu público-alvo, concorrentes e tendências do mercado.</p>
+          <p><strong>Exemplo:</strong> Uma nova cafeteria direcionada a jovens profissionais em áreas urbanas...</p>`,
+        financialPlanTitle: "Plano Financeiro",
+        financialPlanTable: `<tr>
+              <th>Categoria</th>
+              <th>Custo Estimado</th>
+            </tr>
+            <tr>
+              <td>Custos Iniciais</td>
+              <td>$50,000</td>
+            </tr>
+            <tr>
+              <td>Receita Mensal</td>
+              <td>$10,000</td>
+            </tr>`,
+        downloadBtn: "Baixar como PDF"
+      }
+    };
+
+    // Função para alterar o idioma da página
+    function changeLanguage(lang) {
+      const texts = translations[lang];
+      document.getElementById("pageHeader").innerText = texts.pageHeader;
+      document.getElementById("pageSubHeader").innerText = texts.pageSubHeader;
+      document.getElementById("introductionTitle").innerText = texts.introductionTitle;
+      document.getElementById("introductionContent").innerHTML = texts.introductionContent;
+      document.getElementById("marketAnalysisTitle").innerText = texts.marketAnalysisTitle;
+      document.getElementById("marketAnalysisContent").innerHTML = texts.marketAnalysisContent;
+      document.getElementById("financialPlanTitle").innerText = texts.financialPlanTitle;
+      document.getElementById("financialTable").innerHTML = texts.financialPlanTable;
+      document.getElementById("downloadBtn").innerText = texts.downloadBtn;
+    }
+
+    // Função para exibir/ocultar o painel de customização
+    function toggleCustomization() {
+      const panel = document.getElementById("customizationPanel");
+      panel.style.display = (panel.style.display === "none" || panel.style.display === "") ? "block" : "none";
+    }
+
+    // Função para aplicar as personalizações definidas pelo usuário
+    function applyCustomization() {
+      // Atualiza cabeçalho e subtítulo
+      const newHeader = document.getElementById("customHeader").value;
+      if (newHeader) {
+        document.getElementById("pageHeader").innerText = newHeader;
+      }
+      const newSubHeader = document.getElementById("customSubHeader").value;
+      if (newSubHeader) {
+        document.getElementById("pageSubHeader").innerText = newSubHeader;
+      }
+      // Atualiza seção de Introdução
+      const newIntroTitle = document.getElementById("customIntroductionTitle").value;
+      if (newIntroTitle) {
+        document.getElementById("introductionTitle").innerText = newIntroTitle;
+      }
+      const newIntroContent = document.getElementById("customIntroductionContent").value;
+      if (newIntroContent) {
+        document.getElementById("introductionContent").innerHTML = newIntroContent;
+      }
+      // Atualiza seção de Análise de Mercado
+      const newMarketTitle = document.getElementById("customMarketTitle").value;
+      if (newMarketTitle) {
+        document.getElementById("marketAnalysisTitle").innerText = newMarketTitle;
+      }
+      const newMarketContent = document.getElementById("customMarketContent").value;
+      if (newMarketContent) {
+        document.getElementById("marketAnalysisContent").innerHTML = newMarketContent;
+      }
+      // Atualiza seção de Plano Financeiro
+      const newFinancialTitle = document.getElementById("customFinancialTitle").value;
+      if (newFinancialTitle) {
+        document.getElementById("financialPlanTitle").innerText = newFinancialTitle;
+      }
+      const newFinancialTable = document.getElementById("customFinancialTable").value;
+      if (newFinancialTable) {
+        // Espera-se que o usuário insira linhas no formato "Categoria:Valor", separadas por ponto e vírgula.
+        const rows = newFinancialTable.split(";").map(row => row.trim()).filter(row => row !== "");
+        let tableHTML = '<tr><th>Category</th><th>Estimated Cost</th></tr>';
+        rows.forEach(row => {
+          const parts = row.split(":");
+          if (parts.length === 2) {
+            tableHTML += `<tr><td>${parts[0].trim()}</td><td>${parts[1].trim()}</td></tr>`;
+          }
         });
+        document.getElementById("financialTable").innerHTML = tableHTML;
+      }
+      toggleCustomization();
+    }
 
-        function updateBusinessDetails() {
-            const businessType = document.getElementById('business-type').value;
-            const table = document.getElementById('financial-table');
-            const marketAnalysis = document.getElementById('market-analysis');
-            let rows = '';
-            let marketContent = '';
-            
-            if (businessType === 'retail') {
-                rows = '<tr><td>Inventory Costs</td><td>$30,000</td></tr>' +
-                       '<tr><td>Store Rental</td><td>$5,000</td></tr>';
-                marketContent = '<p><strong>Target Audience:</strong> Walk-in customers, local shoppers.</p>' +
-                                '<p><strong>Competitors:</strong> Other local retailers.</p>' +
-                                '<p><strong>Trends:</strong> Online shopping impact on physical stores.</p>';
-            } else if (businessType === 'service') {
-                rows = '<tr><td>Equipment</td><td>$10,000</td></tr>' +
-                       '<tr><td>Marketing</td><td>$3,000</td></tr>';
-                marketContent = '<p><strong>Target Audience:</strong> Clients needing specialized services.</p>' +
-                                '<p><strong>Competitors:</strong> Other service providers in the same niche.</p>' +
-                                '<p><strong>Trends:</strong> Demand for high-quality customer service.</p>';
-            } else if (businessType === 'tech') {
-                rows = '<tr><td>Software Development</td><td>$50,000</td></tr>' +
-                       '<tr><td>Cloud Hosting</td><td>$2,000</td></tr>';
-                marketContent = '<p><strong>Target Audience:</strong> Businesses needing digital solutions.</p>' +
-                                '<p><strong>Competitors:</strong> Other tech startups and established firms.</p>' +
-                                '<p><strong>Trends:</strong> Growth of AI and automation.</p>';
-            } else {
-                rows = '<tr><td>Startup Costs</td><td>$50,000</td></tr>' +
-                       '<tr><td>Monthly Revenue</td><td>$10,000</td></tr>';
-                marketContent = '<p>Identify your target audience, competitors, and market trends.</p>' +
-                                '<p><strong>Example:</strong> A new coffee shop targeting young professionals in urban areas...</p>';
-            }
-            
-            table.innerHTML = '<tr><th>Category</th><th>Estimated Cost</th></tr>' + rows;
-            marketAnalysis.innerHTML = marketContent;
-        }
-    </script>
-    <footer>
-        <div class="footer-links">
-            <a href="https://dealegear.wixsite.com/meusite" target="_blank">DealeGear</a>
-            <a href="#">3GTO</a>
-            <a href="#">MyHeart</a>
-            <a href="#">UnderSea</a>
-            <a href="#">OneVision</a>
-            <a href="#">OneDAO</a>
-            <a href="#">VA</a>
-            <a href="#">BF</a>
-            <a href="#">Oxygen</a>
-            <a href="#">Segnetic</a>
-        </div>
-        <div class="social-icons">
-            <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-            <a href="https://twitter.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter"></a>
-        </div>
-        <p>&copy; 2025 STAIRS. A project by the DealeGear platform.</p>
-    </footer>
+    // Função de exemplo para download (a implementação real dependerá da sua estratégia)
+    function downloadPDF() {
+      alert("Download PDF functionality not implemented.");
+    }
+
+    // Adiciona a funcionalidade de alternar visibilidade das seções ao clicar em seus títulos
+    document.querySelectorAll('.section').forEach(section => {
+      section.addEventListener('click', () => {
+        const content = section.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+
+    // Atualiza detalhes do plano de negócios com base na seleção de tipo de negócio
+    function updateBusinessDetails() {
+      const businessType = document.getElementById('business-type').value;
+      const table = document.getElementById('financialTable');
+      const marketContent = document.getElementById('marketAnalysisContent');
+      let rows = '';
+      let marketHTML = '';
+
+      if (businessType === 'retail') {
+        rows = '<tr><td>Inventory Costs</td><td>$30,000</td></tr>' +
+               '<tr><td>Store Rental</td><td>$5,000</td></tr>';
+        marketHTML = '<p><strong>Target Audience:</strong> Walk-in customers, local shoppers.</p>' +
+                     '<p><strong>Competitors:</strong> Other local retailers.</p>' +
+                     '<p><strong>Trends:</strong> Impact of online shopping on physical stores.</p>';
+      } else if (businessType === 'service') {
+        rows = '<tr><td>Equipment</td><td>$10,000</td></tr>' +
+               '<tr><td>Marketing</td><td>$3,000</td></tr>';
+        marketHTML = '<p><strong>Target Audience:</strong> Clients seeking specialized services.</p>' +
+                     '<p><strong>Competitors:</strong> Other service providers in the niche.</p>' +
+                     '<p><strong>Trends:</strong> Growing demand for quality customer service.</p>';
+      } else if (businessType === 'tech') {
+        rows = '<tr><td>Software Development</td><td>$50,000</td></tr>' +
+               '<tr><td>Cloud Hosting</td><td>$2,000</td></tr>';
+        marketHTML = '<p><strong>Target Audience:</strong> Businesses needing digital solutions.</p>' +
+                     '<p><strong>Competitors:</strong> Tech startups and established firms.</p>' +
+                     '<p><strong>Trends:</strong> Growth in AI and automation.</p>';
+      } else if (businessType === 'consulting') {
+        rows = '<tr><td>Consulting Fees</td><td>$20,000</td></tr>' +
+               '<tr><td>Client Acquisition</td><td>$4,000</td></tr>';
+        marketHTML = '<p><strong>Target Audience:</strong> Companies seeking expert advice.</p>' +
+                     '<p><strong>Competitors:</strong> Other consulting firms.</p>' +
+                     '<p><strong>Trends:</strong> Increasing outsourcing of strategic services.</p>';
+      } else if (businessType === 'manufacturing') {
+        rows = '<tr><td>Equipment & Machinery</td><td>$80,000</td></tr>' +
+               '<tr><td>Raw Materials</td><td>$20,000</td></tr>';
+        marketHTML = '<p><strong>Target Audience:</strong> Businesses in need of bulk production.</p>' +
+                     '<p><strong>Competitors:</strong> Established manufacturers.</p>' +
+                     '<p><strong>Trends:</strong> Emphasis on automation and lean manufacturing.</p>';
+      } else {
+        rows = '<tr><td>Startup Costs</td><td>$50,000</td></tr>' +
+               '<tr><td>Monthly Revenue</td><td>$10,000</td></tr>';
+        marketHTML = '<p>Identify your target audience, competitors, and market trends.</p>' +
+                     '<p><strong>Example:</strong> A new coffee shop targeting young professionals in urban areas...</p>';
+      }
+
+      table.innerHTML = '<tr><th>Category</th><th>Estimated Cost</th></tr>' + rows;
+      marketContent.innerHTML = marketHTML;
+    }
+  </script>
+  <footer>
+    <div class="footer-links">
+      <a href="https://dealegear.wixsite.com/meusite" target="_blank">DealeGear</a>
+      <a href="#">3GTO</a>
+      <a href="#">MyHeart</a>
+      <a href="#">UnderSea</a>
+      <a href="#">OneVision</a>
+      <a href="#">OneDAO</a>
+      <a href="#">VA</a>
+      <a href="#">BF</a>
+      <a href="#">Oxygen</a>
+      <a href="#">Segnetic</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+      </a>
+      <a href="https://twitter.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter" />
+      </a>
+    </div>
+    <p>&copy; 2025 STAIRS. A project by the DealeGear platform.</p>
+  </footer>
 </body>
 </html>
