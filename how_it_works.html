@@ -1,209 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STAIRS - How It Works</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STAIRS - How It Works</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
 
-        header {
-            background-color: #FF0000;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
+    header {
+      background-color: #FF0000;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      position: relative;
+    }
+    /* Botões de idioma */
+    .lang-buttons {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+    .lang-buttons button {
+      margin-left: 5px;
+      padding: 5px 10px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    .lang-buttons button:hover {
+      background-color: #575757;
+    }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            flex-wrap: wrap;
-        }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      flex-wrap: wrap;
+    }
 
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
 
-        nav a:hover {
-            background-color: #575757;
-        }
+    nav a:hover {
+      background-color: #575757;
+    }
 
-        .container {
-            padding: 20px;
-            max-width: 1000px;
-            margin: auto;
-            text-align: center;
-        }
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
 
-        .step {
-            background-color: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+    .step {
+      background-color: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
 
-        .step img {
-            width: 100px;
-            height: 100px;
-        }
+    .step img {
+      width: 100px;
+      height: 100px;
+    }
 
-        .step-content {
-            flex: 1;
-            text-align: left;
-        }
+    .step-content {
+      flex: 1;
+      text-align: left;
+    }
 
-        .step h3 {
-            color: #4CAF50;
-        }
+    .step h3 {
+      color: #4CAF50;
+    }
 
-        .step p {
-            color: #555;
-        }
+    .step p {
+      color: #555;
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #222;
-            color: white;
-        }
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
-        }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
 
-        .footer-links a {
-            color: #4CAF50;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+    .footer-links a {
+      color: #4CAF50;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
 
-        footer a:hover {
-            text-decoration: underline;
-        }
-         .social-icons {
-            margin-top: 10px;
-        }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .social-icons {
+      margin-top: 10px;
+    }
 
-        .social-icons a {
-            margin: 0 10px;
-            display: inline-block;
-        }
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+    }
 
-        .social-icons img {
-            width: 24px;
-            height: 24px;
-        }
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+    }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
 
-            .step {
-                flex-direction: column;
-                align-items: center;
-            }
+      .step {
+        flex-direction: column;
+        align-items: center;
+      }
 
-            .step img {
-                width: 80px;
-                height: 80px;
-            }
-        }
-    </style>
+      .step img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>How STAIRS Works</h1>
-        <p>Step-by-step guide to transforming your ideas into reality</p>
-    </header>
+  <header>
+    <!-- Botões para seleção de idioma -->
+    <div class="lang-buttons">
+      <button onclick="changeLanguage('en')">English</button>
+      <button onclick="changeLanguage('es')">Español</button>
+      <button onclick="changeLanguage('pt')">Português</button>
+    </div>
+    <h1 id="headerTitle">How STAIRS Works</h1>
+    <p id="headerSubtitle">Step-by-step guide to transforming your ideas into reality</p>
+  </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="custom_templates_page.html">Templates</a>
-        <a href="how_it_works.html">How It Works</a>
-        <a href="business_plan_template.html">Business Plan</a>
-        <a href="https://dealegear.wixsite.com/meusite" target="_blank">Visit DealeGear</a>
-    </nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="custom_templates_page.html">Templates</a>
+    <a href="how_it_works.html">How It Works</a>
+    <a href="business_plan_template.html">Business Plan</a>
+    <a href="https://dealegear.wixsite.com/meusite" target="_blank">Visit DealeGear</a>
+  </nav>
 
-    <div class="container">
-        <h2>Follow These Steps to Success</h2>
+  <div class="container">
+    <h2 id="containerTitle">Follow These Steps to Success</h2>
 
-        <div class="step">
-            <img src="img/tipo.png" alt="Choose Project Type">
-            <div class="step-content">
-                <h3>Step 1: Choose Your Project Type</h3>
-                <p>Decide whether your project is for personal satisfaction, business, or career growth.</p>
-            </div>
-        </div>
-
-        <div class="step">
-            <img src="img/template.png" alt="Select a Template">
-            <div class="step-content">
-                <h3>Step 2: Select a Template</h3>
-                <p>Browse and choose a customizable template to fit your needs.</p>
-            </div>
-        </div>
-
-        <div class="step">
-            <img src="img/customizar.png" alt="Customize & Organize">
-            <div class="step-content">
-                <h3>Step 3: Customize & Organize</h3>
-                <p>Use the STAIRS tools to edit, plan, and structure your project.</p>
-            </div>
-        </div>
-
-        <div class="step">
-            <img src="img/progresso.png" alt="Track Progress">
-            <div class="step-content">
-                <h3>Step 4: Track Your Progress</h3>
-                <p>Monitor your progress using Kanban boards, task lists, and analytics.</p>
-            </div>
-        </div>
-
-        <div class="step">
-            <img src="img/colaborar.png" alt="Share & Collaborate">
-            <div class="step-content">
-                <h3>Step 5: Share & Collaborate</h3>
-                <p>Connect with the STAIRS community for feedback and support.</p>
-            </div>
-        </div>
+    <div class="step">
+      <img src="img/tipo.png" alt="Choose Project Type">
+      <div class="step-content">
+        <h3 id="step1Title">Step 1: Choose Your Project Type</h3>
+        <p id="step1Text">Decide whether your project is for personal satisfaction, business, or career growth.</p>
+      </div>
     </div>
 
-   <footer>
-        <div class="footer-links">
-            <a href="https://dealegear.wixsite.com/meusite" target="_blank">DealeGear</a>
-            <a href="#">3GTO</a>
-            <a href="#">MyHeart</a>
-            <a href="#">UnderSea</a>
-            <a href="#">OneVision</a>
-            <a href="#">OneDAO</a>
-            <a href="#">VA</a>
-            <a href="#">BF</a>
-            <a href="#">Oxygen</a>
-            <a href="#">Segnetic</a>
-        </div>
-        <div class="social-icons">
-            <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-            <a href="https://twitter.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter"></a>
-        </div>
-        <p>&copy; 2025 STAIRS. A project by the DealeGear platform.</p>
-    </footer>
+    <div class="step">
+      <img src="img/template.png" alt="Select a Template">
+      <div class="step-content">
+        <h3 id="step2Title">Step 2: Select a Template</h3>
+        <p id="step2Text">Browse and choose a customizable template to fit your needs.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="img/customizar.png" alt="Customize & Organize">
+      <div class="step-content">
+        <h3 id="step3Title">Step 3: Customize & Organize</h3>
+        <p id="step3Text">Use the STAIRS tools to edit, plan, and structure your project.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="img/progresso.png" alt="Track Progress">
+      <div class="step-content">
+        <h3 id="step4Title">Step 4: Track Your Progress</h3>
+        <p id="step4Text">Monitor your progress using Kanban boards, task lists, and analytics.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="img/colaborar.png" alt="Share & Collaborate">
+      <div class="step-content">
+        <h3 id="step5Title">Step 5: Share & Collaborate</h3>
+        <p id="step5Text">Connect with the STAIRS community for feedback and support.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://dealegear.wixsite.com/meusite" target="_blank">DealeGear</a>
+      <a href="#">3GTO</a>
+      <a href="#">MyHeart</a>
+      <a href="#">UnderSea</a>
+      <a href="#">OneVision</a>
+      <a href="#">OneDAO</a>
+      <a href="#">VA</a>
+      <a href="#">BF</a>
+      <a href="#">Oxygen</a>
+      <a href="#">Segnetic</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+      <a href="https://twitter.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter"></a>
+    </div>
+    <p>&copy; 2025 STAIRS. A project by the DealeGear platform.</p>
+  </footer>
+
+  <script>
+    // Objeto com traduções para inglês, espanhol e português brasileiro
+    const translations = {
+      en: {
+        headerTitle: "How STAIRS Works",
+        headerSubtitle: "Step-by-step guide to transforming your ideas into reality",
+        containerTitle: "Follow These Steps to Success",
+        step1Title: "Step 1: Choose Your Project Type",
+        step1Text: "Decide whether your project is for personal satisfaction, business, or career growth.",
+        step2Title: "Step 2: Select a Template",
+        step2Text: "Browse and choose a customizable template to fit your needs.",
+        step3Title: "Step 3: Customize & Organize",
+        step3Text: "Use the STAIRS tools to edit, plan, and structure your project.",
+        step4Title: "Step 4: Track Your Progress",
+        step4Text: "Monitor your progress using Kanban boards, task lists, and analytics.",
+        step5Title: "Step 5: Share & Collaborate",
+        step5Text: "Connect with the STAIRS community for feedback and support."
+      },
+      es: {
+        headerTitle: "Cómo Funciona STAIRS",
+        headerSubtitle: "Guía paso a paso para transformar tus ideas en realidad",
+        containerTitle: "Sigue Estos Pasos para el Éxito",
+        step1Title: "Paso 1: Elige el Tipo de Proyecto",
+        step1Text: "Decide si tu proyecto es para satisfacción personal, negocios o crecimiento profesional.",
+        step2Title: "Paso 2: Selecciona una Plantilla",
+        step2Text: "Explora y elige una plantilla personalizable que se adapte a tus necesidades.",
+        step3Title: "Paso 3: Personaliza y Organiza",
+        step3Text: "Utiliza las herramientas de STAIRS para editar, planificar y estructurar tu proyecto.",
+        step4Title: "Paso 4: Controla tu Progreso",
+        step4Text: "Monitorea tu progreso usando tableros Kanban, listas de tareas y análisis.",
+        step5Title: "Paso 5: Comparte y Colabora",
+        step5Text: "Conéctate con la comunidad STAIRS para recibir comentarios y apoyo."
+      },
+      pt: {
+        headerTitle: "Como o STAIRS Funciona",
+        headerSubtitle: "Guia passo a passo para transformar suas ideias em realidade",
+        containerTitle: "Siga Estes Passos para o Sucesso",
+        step1Title: "Passo 1: Escolha o Tipo de Projeto",
+        step1Text: "Decida se seu projeto é para satisfação pessoal, negócios ou crescimento na carreira.",
+        step2Title: "Passo 2: Selecione um Modelo",
+        step2Text: "Navegue e escolha um modelo personalizável que atenda às suas necessidades.",
+        step3Title: "Passo 3: Personalize e Organize",
+        step3Text: "Utilize as ferramentas do STAIRS para editar, planejar e estruturar seu projeto.",
+        step4Title: "Passo 4: Acompanhe seu Progresso",
+        step4Text: "Monitore seu progresso usando quadros Kanban, listas de tarefas e análises.",
+        step5Title: "Passo 5: Compartilhe e Colabore",
+        step5Text: "Conecte-se com a comunidade STAIRS para obter feedback e apoio."
+      }
+    };
+
+    // Função para alterar o idioma da página
+    function changeLanguage(lang) {
+      const texts = translations[lang];
+
+      document.getElementById("headerTitle").innerText = texts.headerTitle;
+      document.getElementById("headerSubtitle").innerText = texts.headerSubtitle;
+      document.getElementById("containerTitle").innerText = texts.containerTitle;
+      document.getElementById("step1Title").innerText = texts.step1Title;
+      document.getElementById("step1Text").innerText = texts.step1Text;
+      document.getElementById("step2Title").innerText = texts.step2Title;
+      document.getElementById("step2Text").innerText = texts.step2Text;
+      document.getElementById("step3Title").innerText = texts.step3Title;
+      document.getElementById("step3Text").innerText = texts.step3Text;
+      document.getElementById("step4Title").innerText = texts.step4Title;
+      document.getElementById("step4Text").innerText = texts.step4Text;
+      document.getElementById("step5Title").innerText = texts.step5Title;
+      document.getElementById("step5Text").innerText = texts.step5Text;
+    }
+  </script>
 </body>
 </html>
