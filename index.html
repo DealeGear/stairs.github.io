@@ -1,209 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STAIRS - Transform Your Ideas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-
-        header {
-            background-color: #FF0000;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        nav a:hover {
-            background-color: #575757;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 50px;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x600') center/cover;
-            color: white;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin: 20px 0;
-        }
-
-        .cta-button {
-            background-color: #00008B;
-            color: white;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 10px;
-        }
-
-        .cta-button:hover {
-            background-color: #ADD8E6;
-        }
-
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .feature {
-            flex: 1;
-            min-width: 300px;
-            margin: 10px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .feature img {
-            max-width: 100px;
-            margin-bottom: 10px;
-        }
-
-        .feature h3 {
-            margin: 10px 0;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: #222;
-            color: white;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: #4CAF50;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-
-        .social-icons {
-            margin-top: 10px;
-        }
-
-        .social-icons a {
-            margin: 0 10px;
-            display: inline-block;
-        }
-
-        .social-icons img {
-            width: 24px;
-            height: 24px;
-        }
-
-        @media (max-width: 768px) {
-            .features {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-            .alert {
-            text-align: center;
-            background-color: #ffcc00;
-            padding: 10px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STAIRS - Transform Your Ideas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #FF0000;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      position: relative;
+    }
+    /* Botões de idioma */
+    .lang-buttons {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+    .lang-buttons button {
+      margin-left: 5px;
+      padding: 5px 10px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    .lang-buttons button:hover {
+      background-color: #575757;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+    .hero {
+      text-align: center;
+      padding: 50px;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x600') center/cover;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+    .cta-button {
+      background-color: #00008B;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .cta-button:hover {
+      background-color: #ADD8E6;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .feature {
+      flex: 1;
+      min-width: 300px;
+      margin: 10px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .feature img {
+      max-width: 100px;
+      margin-bottom: 10px;
+    }
+    .feature h3 {
+      margin: 10px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #222;
+      color: white;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .footer-links a {
+      color: #4CAF50;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    .social-icons {
+      margin-top: 10px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+    }
+    @media (max-width: 768px) {
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .alert {
+      text-align: center;
+      background-color: #ffcc00;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to STAIRS</h1>
-        <p>Your platform to transform ideas into reality</p>
-        
-    </header>
- <div class="alert">This is only a beta version, designed to test concepts and serve as a model for future projects, changes will not be saved.</div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="custom_templates_page.html">Templates</a>
-        <a href="how_it_works.html">How It Works</a>
-        <a href="business_plan_template.html">Business Plan</a>
-        <a href="https://dealegear.wixsite.com/meusite" target="_blank">Visit DealeGear</a>
-    </nav>
+  <header>
+    <!-- Botões para seleção de idioma -->
+    <div class="lang-buttons">
+      <button onclick="changeLanguage('en')">English</button>
+      <button onclick="changeLanguage('es')">Español</button>
+    </div>
+    <h1 id="headerTitle">Welcome to STAIRS</h1>
+    <p id="headerSubtitle">Your platform to transform ideas into reality</p>
+  </header>
+  
+  <div class="alert" id="alertMessage">
+    This is only a beta version, designed to test concepts and serve as a model for future projects, changes will not be saved.
+  </div>
+  
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="custom_templates_page.html">Templates</a>
+    <a href="how_it_works.html">How It Works</a>
+    <a href="business_plan_template.html">Business Plan</a>
+    <a href="https://dealegear.wixsite.com/meusite" target="_blank">Visit DealeGear</a>
+  </nav>
+  
+  <section class="hero">
+    <h1 id="heroTitle">Step Up Your Ideas with STAIRS</h1>
+    <p id="heroSubtitle">Turn your hobbies, goals, or business plans into actionable projects with ease.</p>
+  </section>
+  
+  <section id="features" class="features">
+    <div class="feature">
+      <img src="img/template.png" alt="Templates">
+      <h3 id="feature1Title">Customizable Templates</h3>
+      <p id="feature1Text">Choose a template to kickstart your project.</p>
+      <a href="custom_templates_page.html" class="cta-button" id="feature1Button">Explore Templates</a>
+    </div>
+    <div class="feature">
+      <img src="img/kanban.png" alt="Kanban Board">
+      <h3 id="feature2Title">Kanban Boards</h3>
+      <p id="feature2Text">Organize tasks and track progress with visual tools.</p>
+      <a href="kanban.html" class="cta-button" id="feature2Button">Access Kanban Board</a>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="footer-links">
+      <a href="https://dealegear.wixsite.com/meusite" target="_blank">DealeGear</a>
+      <a href="#">3GTO</a>
+      <a href="#">MyHeart</a>
+      <a href="#">UnderSea</a>
+      <a href="#">OneVision</a>
+      <a href="#">OneDAO</a>
+      <a href="#">VA</a>
+      <a href="#">BF</a>
+      <a href="#">Oxygen</a>
+      <a href="#">Segnetic</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+      <a href="https://twitter.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter">
+      </a>
+    </div>
+    <p>&copy; 2025 STAIRS. A project by the DealeGear platform.</p>
+  </footer>
 
-    <section class="hero">
-        <h1>Step Up Your Ideas with STAIRS</h1>
-        <p>Turn your hobbies, goals, or business plans into actionable projects with ease.</p>
-    </section>
+  <script>
+    // Objeto com traduções para inglês e espanhol
+    const translations = {
+      en: {
+        headerTitle: "Welcome to STAIRS",
+        headerSubtitle: "Your platform to transform ideas into reality",
+        alertMessage: "This is only a beta version, designed to test concepts and serve as a model for future projects, changes will not be saved.",
+        heroTitle: "Step Up Your Ideas with STAIRS",
+        heroSubtitle: "Turn your hobbies, goals, or business plans into actionable projects with ease.",
+        feature1Title: "Customizable Templates",
+        feature1Text: "Choose a template to kickstart your project.",
+        feature1Button: "Explore Templates",
+        feature2Title: "Kanban Boards",
+        feature2Text: "Organize tasks and track progress with visual tools.",
+        feature2Button: "Access Kanban Board"
+      },
+      es: {
+        headerTitle: "Bienvenido a STAIRS",
+        headerSubtitle: "Tu plataforma para transformar ideas en realidad",
+        alertMessage: "Esta es solo una versión beta, diseñada para probar conceptos y servir como modelo para futuros proyectos; los cambios no se guardarán.",
+        heroTitle: "Impulsa tus ideas con STAIRS",
+        heroSubtitle: "Convierte tus pasatiempos, metas o planes de negocio en proyectos accionables con facilidad.",
+        feature1Title: "Plantillas Personalizables",
+        feature1Text: "Elige una plantilla para iniciar tu proyecto.",
+        feature1Button: "Explorar Plantillas",
+        feature2Title: "Tableros Kanban",
+        feature2Text: "Organiza tareas y sigue el progreso con herramientas visuales.",
+        feature2Button: "Acceder al Tablero Kanban"
+      }
+    };
 
-    <section id="features" class="features">
-        <div class="feature">
-            <img src="img/template.png" alt="Templates">
-            <h3>Customizable Templates</h3>
-            <p>Choose a template to kickstart your project.</p>
-            <a href="custom_templates_page.html" class="cta-button">Explore Templates</a>
-        </div>
-        <div class="feature">
-            <img src="img/kanban.png" alt="Kanban Board">
-            <h3>Kanban Boards</h3>
-            <p>Organize tasks and track progress with visual tools.</p>
-            <a href="kanban.html" class="cta-button">Access Kanban Board</a>
-        </div>
-        </section>
+    // Função para alterar idioma
+    function changeLanguage(lang) {
+      const texts = translations[lang];
 
-    <footer>
-        <div class="footer-links">
-            <a href="https://dealegear.wixsite.com/meusite" target="_blank">DealeGear</a>
-            <a href="#">3GTO</a>
-            <a href="#">MyHeart</a>
-            <a href="#">UnderSea</a>
-            <a href="#">OneVision</a>
-            <a href="#">OneDAO</a>
-            <a href="#">VA</a>
-            <a href="#">BF</a>
-            <a href="#">Oxygen</a>
-            <a href="#">Segnetic</a>
-        </div>
-        <div class="social-icons">
-            <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-            <a href="https://twitter.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter"></a>
-        </div>
-        <p>&copy; 2025 STAIRS. A project by the DealeGear platform.</p>
-    </footer>
+      document.getElementById("headerTitle").innerText = texts.headerTitle;
+      document.getElementById("headerSubtitle").innerText = texts.headerSubtitle;
+      document.getElementById("alertMessage").innerText = texts.alertMessage;
+      document.getElementById("heroTitle").innerText = texts.heroTitle;
+      document.getElementById("heroSubtitle").innerText = texts.heroSubtitle;
+      document.getElementById("feature1Title").innerText = texts.feature1Title;
+      document.getElementById("feature1Text").innerText = texts.feature1Text;
+      document.getElementById("feature1Button").innerText = texts.feature1Button;
+      document.getElementById("feature2Title").innerText = texts.feature2Title;
+      document.getElementById("feature2Text").innerText = texts.feature2Text;
+      document.getElementById("feature2Button").innerText = texts.feature2Button;
+    }
+  </script>
 </body>
 </html>
