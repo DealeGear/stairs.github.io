@@ -1,276 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Learning a New Language</title>
-    <style>
-
-        .audio-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-
-       header {
-            background-color: #FF0000;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        nav a:hover {
-            background-color: #575757;
-        }
-
-        ul {
-            list-style-type: none;
-            margin-bottom: 20px;
-        }
-
-        ul li {
-            font-size: 1.1rem;
-            margin: 8px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        ul li:before {
-            content: '✔';
-            color: #4CAF50;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        section {
-            background-color: white;
-            margin-bottom: 30px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        p {
-            font-size: 1.2rem;
-            margin-top: 20px;
-            text-align: center;
-        }
-     
-           ul li {
-                font-size: 1rem;
-            }
-        
-                footer {
-            text-align: center;
-            padding: 30px;
-            background-color: #222;
-            color: white;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: #222;
-            color: white;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: #4CAF50;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-
-        .social-icons {
-            margin-top: 10px;
-        }
-
-        .social-icons a {
-            margin: 0 10px;
-            display: inline-block;
-        }
-
-        .social-icons img {
-            width: 24px;
-            height: 24px;
-        }
-
-        @media (max-width: 768px) {
-            .features {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-
-        .mind-map img {
-    width: 100px;  /* Define a largura */
-    height: auto;  /* Mantém a proporção original */
-    display: block; /* Garante que a margin funcione */
-    margin: 0 auto; /* Centraliza horizontalmente */
-}
-        
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Learning a New Language</title>
+  <style>
+    .audio-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #FF0000;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+    ul {
+      list-style-type: none;
+      margin-bottom: 20px;
+    }
+    ul li {
+      font-size: 1.1rem;
+      margin: 8px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+    ul li:before {
+      content: '✔';
+      color: #4CAF50;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    section {
+      background-color: white;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    p {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      text-align: center;
+    }
+    ul li {
+      font-size: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #222;
+      color: white;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .footer-links a {
+      color: #4CAF50;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    .social-icons {
+      margin-top: 10px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+    }
+    @media (max-width: 768px) {
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .mind-map img {
+      width: 100px;  /* Define a largura */
+      height: auto;  /* Mantém a proporção original */
+      display: block; /* Garante que a margin funcione */
+      margin: 0 auto; /* Centraliza horizontalmente */
+    }
+    /* Estilo para o painel de customização */
+    #customizationPanel {
+      background-color: #eee;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 8px;
+      display: none; /* Oculto inicialmente */
+    }
+    #customizationPanel input,
+    #customizationPanel textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    #customizationPanel button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    #customizationPanel button:hover {
+      background-color: #45a049;
+    }
+    /* Botão para mostrar/ocultar painel de customização */
+    #toggleCustomization {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    #toggleCustomization:hover {
+      background-color: #575757;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Learning a New Language</h1>
-    </header>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../custom_templates_page.html">Templates</a>
-        <a href="../how_it_works.html">How It Works</a>
-        <a href="../business_plan_template.html">Business Plan</a>
-        <a href="https://dealegear.wixsite.com/meusite" target="_blank">Visit DealeGear</a>
-    </nav>
-    <main>
+  <header>
+    <h1 id="pageHeader">Learning a New Language</h1>
+  </header>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../custom_templates_page.html">Templates</a>
+    <a href="../how_it_works.html">How It Works</a>
+    <a href="../business_plan_template.html">Business Plan</a>
+    <a href="https://dealegear.wixsite.com/meusite" target="_blank">Visit DealeGear</a>
+  </nav>
 
-         
+  <!-- Botão para exibir/ocultar o painel de customização -->
+  <button id="toggleCustomization" onclick="toggleCustomization()">Customize Content</button>
 
-        <section class="audio-container">
-          
-    <!-- Audio Player -->
-    <audio controls>
+  <!-- Painel de Customização -->
+  <div id="customizationPanel">
+    <h2>Customize This Page</h2>
+    <label for="customHeader">Header Title:</label>
+    <input type="text" id="customHeader" placeholder="Enter new header title">
+    
+    <label for="customSection1">Section 1 Title (Define Your Goal):</label>
+    <input type="text" id="customSection1" placeholder="Enter new title for Section 1">
+    
+    <label for="customSection1List">Section 1 List Items (separated by semicolon):</label>
+    <textarea id="customSection1List" rows="4" placeholder="Enter list items separated by ;"></textarea>
+    
+    <button onclick="applyCustomization()">Save Customization</button>
+  </div>
+
+  <main>
+    <section class="audio-container">
+      <!-- Audio Player -->
+      <audio controls>
         <source src="../audio/learning_a_new_language.MP3" type="audio/mp3">
         Your browser does not support the audio element.
-    </audio>
-        </section>
-        
-        <section>
-            <h2>1. Define Your Goal (Plan)</h2>
-            <ul>
-                <li>Why do you want to learn this language? (Career, travel, cultural interest, personal challenge, etc.)</li>
-                <li>What is your desired level of fluency? (Basic communication, professional fluency, native-like proficiency)</li>
-                <li>Set a timeframe: When do you want to achieve a specific milestone?</li>
-                <li>Choose a language learning method: (Self-study, language school, online courses, immersion, tutoring, etc.)</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>2. Gather the Right Tools and Resources</h2>
-            <ul>
-                <li>Apps & Platforms: Duolingo, Babbel, Anki, LingQ, Pimsleur, Busuu</li>
-                <li>Books & Courses: Textbooks, grammar guides, audiobooks</li>
-                <li>Practice Partners: Language exchange apps (Tandem, HelloTalk), online communities, local meetups</li>
-                <li>Entertainment & Immersion: Podcasts, YouTube channels, movies, TV shows, music in the target language</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>3. Develop a Study Routine (Do)</h2>
-            <ul>
-                <li>Daily Schedule: Set specific times to practice reading, writing, speaking, and listening</li>
-                <li>Microlearning: Use flashcards, quick exercises, and small challenges daily</li>
-                <li>Shadowing Technique: Repeat after native speakers to improve pronunciation</li>
-                <li>Speaking Practice: Join conversation groups, find a language buddy, or hire a tutor</li>
-                <li>Writing Practice: Start a journal, write social media posts, or engage in online forums</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>4. Apply PDCA (Check & Improve)</h2>
-            <ul>
-                <li>Plan: Adjust your methods and strategies based on progress</li>
-                <li>Do: Keep track of daily practice using apps or a habit tracker</li>
-                <li>Check: Test yourself regularly with quizzes, mock conversations, and self-recordings</li>
-                <li>Act: Improve weak areas by changing study strategies, focusing on difficult topics, or increasing immersion</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>5. Overcome Common Challenges</h2>
-            <ul>
-                <li>Lack of Time: Use dead time (commuting, waiting in line) for listening or flashcards</li>
-                <li>Fear of Speaking: Start with simple phrases, use AI/chatbots, or practice with non-judgmental partners</li>
-                <li>Lack of Motivation: Track milestones, celebrate small wins, find a study group</li>
-                <li>Plateauing: Change methods, explore new topics, increase immersion</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>6. Track Progress & Celebrate Wins</h2>
-            <ul>
-                <li>Set Milestones: Example - "Hold a 5-minute conversation in 3 months"</li>
-                <li>Measure Fluency: Use CEFR levels (A1, A2, B1, etc.), self-assessments, or tutor feedback</li>
-                <li>Celebrate Achievements: Reward yourself for completing courses, reaching goals, or making progress</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>7. Expand and Maintain Your Skills</h2>
-            <ul>
-                <li>Join Online Communities: Reddit, Discord, Facebook groups for language learners</li>
-                <li>Consume Native Content: Books, news articles, social media in the target language</li>
-                <li>Continue Practicing: Travel, make friends who speak the language, or start new projects using it</li>
-            </ul>
-        </section>
-
-        <section>
-            <p>By following this structured approach, you can successfully learn a new language while continuously improving and adapting your methods. Ready to start?</p>
-        </section>
-    </main>
-
-   <section class="mind-map">
-       <!-- Ícone clicável que abre a imagem grande -->
-        <a href="../img/mapa_mental.jpg" target="_blank">
-            <img src="../img/icon_mapa_mental_2.jpg" alt="Ver imagem completa" >
-        </a> 
-               </section>
+      </audio>
+    </section>
     
-   <footer>
-        <div class="footer-links">
-            <a href="https://dealegear.wixsite.com/meusite" target="_blank">DealeGear</a>
-            <a href="#">3GTO</a>
-            <a href="#">MyHeart</a>
-            <a href="#">UnderSea</a>
-            <a href="#">OneVision</a>
-            <a href="#">OneDAO</a>
-            <a href="#">VA</a>
-            <a href="#">BF</a>
-            <a href="#">Oxygen</a>
-            <a href="#">Segnetic</a>
-        </div>
-        <div class="social-icons">
-            <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-            <a href="https://twitter.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter"></a>
-        </div>
-        <p>&copy; 2025 STAIRS. A project by the DealeGear platform.</p>
-    </footer>
+    <section id="section1">
+      <h2 id="section1Title">1. Define Your Goal (Plan)</h2>
+      <ul id="section1List">
+        <li>Why do you want to learn this language? (Career, travel, cultural interest, personal challenge, etc.)</li>
+        <li>What is your desired level of fluency? (Basic communication, professional fluency, native-like proficiency)</li>
+        <li>Set a timeframe: When do you want to achieve a specific milestone?</li>
+        <li>Choose a language learning method: (Self-study, language school, online courses, immersion, tutoring, etc.)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. Gather the Right Tools and Resources</h2>
+      <ul>
+        <li>Apps & Platforms: Duolingo, Babbel, Anki, LingQ, Pimsleur, Busuu</li>
+        <li>Books & Courses: Textbooks, grammar guides, audiobooks</li>
+        <li>Practice Partners: Language exchange apps (Tandem, HelloTalk), online communities, local meetups</li>
+        <li>Entertainment & Immersion: Podcasts, YouTube channels, movies, TV shows, music in the target language</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Develop a Study Routine (Do)</h2>
+      <ul>
+        <li>Daily Schedule: Set specific times to practice reading, writing, speaking, and listening</li>
+        <li>Microlearning: Use flashcards, quick exercises, and small challenges daily</li>
+        <li>Shadowing Technique: Repeat after native speakers to improve pronunciation</li>
+        <li>Speaking Practice: Join conversation groups, find a language buddy, or hire a tutor</li>
+        <li>Writing Practice: Start a journal, write social media posts, or engage in online forums</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Apply PDCA (Check & Improve)</h2>
+      <ul>
+        <li>Plan: Adjust your methods and strategies based on progress</li>
+        <li>Do: Keep track of daily practice using apps or a habit tracker</li>
+        <li>Check: Test yourself regularly with quizzes, mock conversations, and self-recordings</li>
+        <li>Act: Improve weak areas by changing study strategies, focusing on difficult topics, or increasing immersion</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Overcome Common Challenges</h2>
+      <ul>
+        <li>Lack of Time: Use dead time (commuting, waiting in line) for listening or flashcards</li>
+        <li>Fear of Speaking: Start with simple phrases, use AI/chatbots, or practice with non-judgmental partners</li>
+        <li>Lack of Motivation: Track milestones, celebrate small wins, find a study group</li>
+        <li>Plateauing: Change methods, explore new topics, increase immersion</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Track Progress & Celebrate Wins</h2>
+      <ul>
+        <li>Set Milestones: Example - "Hold a 5-minute conversation in 3 months"</li>
+        <li>Measure Fluency: Use CEFR levels (A1, A2, B1, etc.), self-assessments, or tutor feedback</li>
+        <li>Celebrate Achievements: Reward yourself for completing courses, reaching goals, or making progress</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. Expand and Maintain Your Skills</h2>
+      <ul>
+        <li>Join Online Communities: Reddit, Discord, Facebook groups for language learners</li>
+        <li>Consume Native Content: Books, news articles, social media in the target language</li>
+        <li>Continue Practicing: Travel, make friends who speak the language, or start new projects using it</li>
+      </ul>
+    </section>
+
+    <section>
+      <p>By following this structured approach, you can successfully learn a new language while continuously improving and adapting your methods. Ready to start?</p>
+    </section>
+  </main>
+
+  <section class="mind-map">
+    <!-- Ícone clicável que abre a imagem grande -->
+    <a href="../img/mapa_mental.jpg" target="_blank">
+      <img src="../img/icon_mapa_mental_2.jpg" alt="Ver imagem completa">
+    </a> 
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://dealegear.wixsite.com/meusite" target="_blank">DealeGear</a>
+      <a href="#">3GTO</a>
+      <a href="#">MyHeart</a>
+      <a href="#">UnderSea</a>
+      <a href="#">OneVision</a>
+      <a href="#">OneDAO</a>
+      <a href="#">VA</a>
+      <a href="#">BF</a>
+      <a href="#">Oxygen</a>
+      <a href="#">Segnetic</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+      <a href="https://twitter.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter">
+      </a>
+    </div>
+    <p>&copy; 2025 STAIRS. A project by the DealeGear platform.</p>
+  </footer>
+
+  <script>
+    // Função para mostrar ou esconder o painel de customização
+    function toggleCustomization() {
+      const panel = document.getElementById("customizationPanel");
+      panel.style.display = panel.style.display === "none" || panel.style.display === "" ? "block" : "none";
+    }
+
+    // Função para aplicar as personalizações
+    function applyCustomization() {
+      // Atualiza o título do cabeçalho
+      const newHeader = document.getElementById("customHeader").value;
+      if(newHeader) {
+        document.getElementById("pageHeader").innerText = newHeader;
+      }
+      
+      // Atualiza o título da primeira seção
+      const newSectionTitle = document.getElementById("customSection1").value;
+      if(newSectionTitle) {
+        document.getElementById("section1Title").innerText = newSectionTitle;
+      }
+      
+      // Atualiza os itens da lista da primeira seção (dividindo por ponto e vírgula)
+      const newListItems = document.getElementById("customSection1List").value;
+      if(newListItems) {
+        const items = newListItems.split(";").map(item => item.trim()).filter(item => item !== "");
+        const ul = document.getElementById("section1List");
+        ul.innerHTML = ""; // Limpa a lista atual
+        items.forEach(item => {
+          const li = document.createElement("li");
+          li.innerText = item;
+          ul.appendChild(li);
+        });
+      }
+      
+      // Esconde o painel de customização após salvar
+      toggleCustomization();
+    }
+  </script>
 
 </body>
 </html>
