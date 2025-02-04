@@ -18,6 +18,23 @@
             padding: 15px;
             text-align: center;
         }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
 
         .container {
             max-width: 900px;
@@ -35,7 +52,7 @@
             padding: 15px;
         }
 
-        .insights-btn, .translate-btn {
+        .insights-btn {
             display: block;
             margin-top: 10px;
             background-color: #4CAF50;
@@ -44,10 +61,6 @@
             padding: 5px 10px;
             cursor: pointer;
         }
-
-        .translate-btn {
-            background-color: #007BFF;
-        }
     </style>
 </head>
 <body>
@@ -55,15 +68,22 @@
         <h1>Business Plan Template</h1>
         <p>A structured guide to help you build your business</p>
     </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="custom_templates_page.html">Templates</a>
+        <a href="how_it_works.html">How It Works</a>
+        <a href="business_plan_template.html">Business Plan</a>
+        <a href="https://dealegear.wixsite.com/meusite" target="_blank">Visit DealeGear</a>
+    </nav>
 
     <div class="container">
         <label for="business-type">Choose Business Type:</label>
-        <select id="business-type" onchange="updateInsights()">
-            <option value="tech">Tech Startup</option>
-            <option value="retail">Retail Store</option>
-            <option value="service">Service Provider</option>
+        <select id="business-type" onchange="updateTextFields()">
+            <option value="ecommerce">E-commerce</option>
+            <option value="consulting">Consulting</option>
             <option value="restaurant">Restaurant</option>
-            <option value="freelance">Freelancer</option>
+            <option value="tech-startup">Tech Startup</option>
+            <option value="freelance">Freelance Services</option>
         </select>
 
         <div class="section-wrapper">
@@ -101,46 +121,43 @@
             <textarea id="future-vision" rows="4" cols="50"></textarea>
             <button class="insights-btn" onclick="fillInsight('future-vision')">Insights</button>
         </div>
-
-        <button class="translate-btn" onclick="translateText('pt')">Português</button>
-        <button class="translate-btn" onclick="translateText('en')">English</button>
-        <button class="translate-btn" onclick="translateText('es')">Español</button>
     </div>
 
     <script>
         const insights = {
-            tech: {
-                introduction: "Your tech startup aims to innovate and disrupt the industry...",
-                "market-analysis": "The tech market is competitive, requiring strong differentiation...",
-                "financial-plan": "Consider venture capital and crowdfunding for funding...",
-                "target-audience": "Your customers are tech-savvy individuals or businesses...",
-                "brand-differentiators": "Unique technology and user experience set you apart...",
-                "future-vision": "Aim for scalability and continuous innovation..."
+            ecommerce: {
+                introduction: "Selling online opens doors to a global market with minimal costs.",
+                "market-analysis": "E-commerce is booming; understanding customer preferences is key.",
+                "financial-plan": "Plan for digital marketing, shipping, and inventory management costs.",
+                "target-audience": "Identify online shoppers who seek convenience and variety.",
+                "brand-differentiators": "Unique branding and seamless user experience set you apart.",
+                "future-vision": "Expanding into new markets and leveraging AI-driven recommendations."
             },
-            retail: {
-                introduction: "Your retail store will provide high-quality products...",
-                "market-analysis": "Retail success depends on location and customer service...",
-                "financial-plan": "Manage inventory costs and pricing strategy...",
-                "target-audience": "Your target audience includes local shoppers and online buyers...",
-                "brand-differentiators": "Exclusive products and superior customer service...",
-                "future-vision": "Expand through e-commerce and brand partnerships..."
+            consulting: {
+                introduction: "Your expertise is your biggest asset; help businesses solve problems.",
+                "market-analysis": "A strong network and credibility are essential for consulting success.",
+                "financial-plan": "Budget for marketing, business development, and operational costs.",
+                "target-audience": "Businesses seeking specialized knowledge and strategic advice.",
+                "brand-differentiators": "Tailored solutions and deep industry expertise make you unique.",
+                "future-vision": "Scaling by offering online courses and expanding client base."
             }
         };
 
-        function fillInsight(section) {
-            const businessType = document.getElementById('business-type').value;
-            document.getElementById(section).value = insights[businessType][section] || "";
-        }
-
-        function updateInsights() {
-            document.querySelectorAll("textarea").forEach(textarea => {
-                textarea.value = "";
+        function updateTextFields() {
+            let type = document.getElementById("business-type").value;
+            Object.keys(insights[type]).forEach(section => {
+                document.getElementById(section).value = insights[type][section];
             });
         }
 
-        function translateText(lang) {
-            alert("Translation feature coming soon!");
+        function fillInsight(section) {
+            let type = document.getElementById("business-type").value;
+            document.getElementById(section).value = insights[type][section];
         }
     </script>
+
+    <footer>
+        <p>&copy; 2025 STAIRS. A project by the DealeGear platform.</p>
+    </footer>
 </body>
 </html>
