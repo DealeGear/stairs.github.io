@@ -52,16 +52,6 @@
             padding: 15px;
         }
 
-        .section {
-            cursor: pointer;
-            margin: 0;
-        }
-
-        .section-content {
-            display: none;
-            padding-top: 10px;
-        }
-
         .insights-btn {
             display: block;
             margin-top: 10px;
@@ -70,33 +60,6 @@
             border: none;
             padding: 5px 10px;
             cursor: pointer;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.4);
-            padding-top: 60px;
-        }
-
-        .modal-content {
-            background-color: white;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 50%;
-        }
-
-        .close {
-            color: red;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
         }
     </style>
 </head>
@@ -114,83 +77,67 @@
     </nav>
 
     <div class="container">
+        <label for="business-type">Select Business Type:</label>
+        <select id="business-type" onchange="updateInsights()">
+            <option value="tech">Tech Startup</option>
+            <option value="retail">Retail Store</option>
+            <option value="service">Service-Based Business</option>
+            <option value="restaurant">Restaurant</option>
+            <option value="education">Educational Platform</option>
+        </select>
+
         <div class="section-wrapper">
-            <h2 class="section">Introduction</h2>
-            <div class="section-content">
-                <textarea rows="4" cols="50" placeholder="Describe your business, mission, and objectives..."></textarea>
-                <button class="insights-btn" onclick="openModal('Introduction Insights')">Insights</button>
-            </div>
+            <h2>Introduction</h2>
+            <textarea id="intro" rows="4" cols="50" placeholder="Describe your business, mission, and objectives..."></textarea>
+            <button class="insights-btn" onclick="fillText('intro')">Insights</button>
         </div>
 
         <div class="section-wrapper">
-            <h2 class="section">Market Analysis</h2>
-            <div class="section-content">
-                <textarea rows="4" cols="50" placeholder="Describe your market, competitors, and trends..."></textarea>
-                <button class="insights-btn" onclick="openModal('Market Analysis Insights')">Insights</button>
-            </div>
+            <h2>Market Analysis</h2>
+            <textarea id="market" rows="4" cols="50" placeholder="Describe your market, competitors, and trends..."></textarea>
+            <button class="insights-btn" onclick="fillText('market')">Insights</button>
         </div>
 
         <div class="section-wrapper">
-            <h2 class="section">Financial Plan</h2>
-            <div class="section-content">
-                <textarea rows="4" cols="50" placeholder="Describe your financial projections and funding needs..."></textarea>
-                <button class="insights-btn" onclick="openModal('Financial Plan Insights')">Insights</button>
-            </div>
-        </div>
-
-        <div class="section-wrapper">
-            <h2 class="section">Target Audience</h2>
-            <div class="section-content">
-                <textarea rows="4" cols="50" placeholder="Define your target audience and customer profile..."></textarea>
-                <button class="insights-btn" onclick="openModal('Target Audience Insights')">Insights</button>
-            </div>
-        </div>
-
-        <div class="section-wrapper">
-            <h2 class="section">Brand Differentiators</h2>
-            <div class="section-content">
-                <textarea rows="4" cols="50" placeholder="Describe what makes your brand unique..."></textarea>
-                <button class="insights-btn" onclick="openModal('Brand Differentiators Insights')">Insights</button>
-            </div>
-        </div>
-
-        <div class="section-wrapper">
-            <h2 class="section">Future Vision</h2>
-            <div class="section-content">
-                <textarea rows="4" cols="50" placeholder="Describe your long-term vision for the business..."></textarea>
-                <button class="insights-btn" onclick="openModal('Future Vision Insights')">Insights</button>
-            </div>
-        </div>
-
-        <a href="#" class="download-btn" onclick="downloadPDF()">Download as PDF</a>
-    </div>
-
-    <div id="insights-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <p id="modal-text"></p>
+            <h2>Financial Plan</h2>
+            <textarea id="financial" rows="4" cols="50" placeholder="Describe your financial projections and funding needs..."></textarea>
+            <button class="insights-btn" onclick="fillText('financial')">Insights</button>
         </div>
     </div>
 
     <script>
-        document.querySelectorAll('.section').forEach(section => {
-            section.addEventListener('click', () => {
-                const content = section.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
-            });
-        });
+        const insights = {
+            tech: {
+                intro: "Our innovative technology startup aims to revolutionize the industry with cutting-edge solutions.",
+                market: "The tech market is rapidly evolving, with major opportunities in AI and automation.",
+                financial: "Initial funding will be sourced through venture capital and strategic partnerships."
+            },
+            retail: {
+                intro: "Our retail store offers high-quality products with a unique customer experience.",
+                market: "Retail trends show an increase in demand for sustainable and locally sourced goods.",
+                financial: "Revenue will be driven through direct sales and e-commerce expansion."
+            },
+            service: {
+                intro: "We provide top-notch services tailored to client needs, ensuring satisfaction and quality.",
+                market: "The service industry thrives on customer loyalty and strong word-of-mouth referrals.",
+                financial: "Business sustainability will be maintained through subscription-based models and consulting fees."
+            },
+            restaurant: {
+                intro: "Our restaurant offers a unique dining experience with a focus on fresh, high-quality ingredients.",
+                market: "Consumers are shifting towards healthy and organic food choices.",
+                financial: "Profitability will be achieved through optimized supply chain management and efficient operations."
+            },
+            education: {
+                intro: "Our educational platform empowers learners with accessible and engaging content.",
+                market: "E-learning is on the rise, driven by demand for flexible and remote education solutions.",
+                financial: "Funding strategies include memberships, sponsorships, and online course sales."
+            }
+        };
 
-        function openModal(text) {
-            document.getElementById('modal-text').innerText = text;
-            document.getElementById('insights-modal').style.display = 'block';
-        }
-        function closeModal() {
-            document.getElementById('insights-modal').style.display = 'none';
+        function fillText(section) {
+            const businessType = document.getElementById("business-type").value;
+            document.getElementById(section).value = insights[businessType][section];
         }
     </script>
-
-    <footer>
-        <p>&copy; 2025 STAIRS. A project by the DealeGear platform.</p>
-    </footer>
 </body>
 </html>
